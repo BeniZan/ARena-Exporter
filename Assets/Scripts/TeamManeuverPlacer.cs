@@ -1,7 +1,9 @@
 using Sirenix.OdinInspector;
+using Sirenix.Utilities.Editor;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [ExecuteInEditMode]
 public class TeamManeuverPlacer : SingletonBehaviors.SingletonMono<TeamManeuverPlacer> {
@@ -13,7 +15,6 @@ public class TeamManeuverPlacer : SingletonBehaviors.SingletonMono<TeamManeuverP
     [field: SerializeField, Get] public EditorTeamAnimator EditorAnimator { get; private set; }
 #endif
     public IReadOnlyList<CharComponent> PlacedChars => _placedChars;
-     
 
     public void Activate(TeamManeuver move) {
         if (CurrentActive)
@@ -21,6 +22,10 @@ public class TeamManeuverPlacer : SingletonBehaviors.SingletonMono<TeamManeuverP
         if (move) 
             CurrentActive = move;
         UpdateChars();
+#if UNITY_EDITOR
+        SceneView.duringSceneGui -= SceneView_duringSceneGui;
+        SceneView.duringSceneGui += SceneView_duringSceneGui;
+#endif
     }
 
     public void UpdateChars() {
@@ -53,18 +58,41 @@ public class TeamManeuverPlacer : SingletonBehaviors.SingletonMono<TeamManeuverP
                 placedChar.gameObject.SafeDestroy();
         _placedChars.Clear();
         CurrentActive = null;
+#if UNITY_EDITOR
+        SceneView.duringSceneGui -= SceneView_duringSceneGui;
+#endif
     }
 
     private void OnEnable() {
         Activate(CurrentActive);
+
     }
 
 #if UNITY_EDITOR 
-    private void OnGUI() {
-        for (int i=0; i < _placedChars.Count; i++) {
-            var head = _placedChars[i].Head;
-            Handles.Label(head.position + new Vector3(0, 0.2f, 0), i.ToString());
-        }
+
+    protected override void OnDestroy() {
+        base.OnDestroy();
+        SceneView.duringSceneGui -= SceneView_duringSceneGui;
     }
+    GUIStyle _style;
+    private void SceneView_duringSceneGui(SceneView obj) {
+        if (!CurrentActive)
+            return;
+
+        if(_style == null) {
+            _style = new GUIStyle(SirenixGUIStyles.WhiteLabel); 
+            _style.richText = true;
+            _style.fontSize = 35;
+        }
+
+        Handles.BeginGUI();  
+        for (int i = 0; i < _placedChars.Count; i++) {
+            var head = _placedChars[i].Head;
+            var pos = head.position + new Vector3(0, 0.1f, 0);
+            var lbl = $"<u>{i}</u>";
+            Handles.Label(pos, lbl, _style);
+        }
+        Handles.EndGUI();
+    } 
 #endif
 }

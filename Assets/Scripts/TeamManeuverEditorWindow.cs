@@ -20,7 +20,8 @@ public class TeamManeuverEditorWindow : OdinMenuEditorWindow {
         var win = GetWindow<TeamManeuverEditorWindow>();
         if (!win) win = CreateWindow<TeamManeuverEditorWindow>();
         win.Show();
-    }
+    } 
+     
     protected override OdinMenuTree BuildMenuTree() {
         var tree = new OdinMenuTree();
         tree.AddAllAssetsAtPath("", MovesDir, typeof(TeamManeuver), true, true);
@@ -158,7 +159,8 @@ public class TeamManeuverEditorWindow : OdinMenuEditorWindow {
 
     private void OnInspectorUpdate() {
         Repaint();
-    }
+
+    } 
 
     void OnSelection() {
         if (MenuTree.Selection.Count == 0 && MenuTree.MenuItems.Count > 0)

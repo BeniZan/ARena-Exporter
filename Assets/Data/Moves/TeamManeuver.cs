@@ -1,7 +1,10 @@
-using Sirenix.OdinInspector;
+using Sirenix.OdinInspector; 
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR
+using Sirenix.Utilities.Editor;
+#endif
 
 [System.Serializable]
 public class TeamManeuver : ScriptableObject {
@@ -12,7 +15,8 @@ public class TeamManeuver : ScriptableObject {
 
     void OnBeginItemGUI(int idx){
 #if UNITY_EDITOR
-        EditorGUILayout.LabelField( "Player: " + idx.ToString());
+        SirenixEditorGUI.Title("Player: " + idx.ToString(), "",TextAlignment.Left, true, true);
+        EditorGUILayout.Space();
 #endif
     }
 
