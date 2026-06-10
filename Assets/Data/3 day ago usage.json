@@ -1,0 +1,1052 @@
+{
+  "data": {
+    "0": [
+      {
+        "guid": "d83a2c4c-a58b-473c-898b-f790989a9a3e",
+        "position": {
+          "x": 4.409336,
+          "y": -0.05096793,
+          "z": -0.05796528
+        },
+        "rotation": {
+          "x": 0.0008699782,
+          "y": 0.999923766,
+          "z": -0.0001674571,
+          "w": 0.0123137664
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "PNR_Switch_a",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 3,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "a216d5fa-8c2d-4dc9-9c88-7d49df494be9",
+        "position": {
+          "x": 1.72942829,
+          "y": -0.07263613,
+          "z": -0.03886652
+        },
+        "rotation": {
+          "x": -0.000150774227,
+          "y": 0.720459342,
+          "z": -0.0005077682,
+          "w": 0.693497
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "PNR_Switch_b",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 4,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "9c4ad79c-0218-4f91-97d9-8e1f76b549be",
+        "position": {
+          "x": 1.99673271,
+          "y": -0.1157819,
+          "z": 1.10807991
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.999035835,
+          "z": 0.0,
+          "w": -0.04390324
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "PNR_Switch_c",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 4,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "ae3b3c9f-282a-4c64-a98c-f26e05046f8c",
+        "position": {
+          "x": -2.2197752,
+          "y": -0.01025486,
+          "z": 5.030237
+        },
+        "rotation": {
+          "x": 0.0002657942,
+          "y": 0.9964563,
+          "z": 0.000204228854,
+          "w": -0.08411137
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Dim",
+          "animation": "Help_Defense",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 1,
+          "triggers": [
+            {
+              "position": {
+                "x": 21.8562717,
+                "y": -0.501293361,
+                "z": 19.5189285
+              },
+              "rotation": {
+                "x": 0.0,
+                "y": 0.537299633,
+                "z": 0.0,
+                "w": 0.8433914
+              },
+              "size": {
+                "x": 3.0,
+                "y": 2.0,
+                "z": 3.0
+              },
+              "center": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "animation": "None",
+              "secondStageAnimation": true
+            }
+          ]
+        }
+      },
+      {
+        "guid": "c05cf0cb-6057-4cdb-b1d1-41fffd92bf8f",
+        "position": {
+          "x": -6.49844551,
+          "y": -0.0381286144,
+          "z": 5.835579
+        },
+        "rotation": {
+          "x": 0.000454016583,
+          "y": 0.739182949,
+          "z": -0.000461558026,
+          "w": 0.6735044
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 3,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "d243afbe-847b-4bdf-9b18-ae9b8cff6dbb",
+        "position": {
+          "x": 7.2889843,
+          "y": -0.0503220558,
+          "z": 4.520458
+        },
+        "rotation": {
+          "x": -0.0007220888,
+          "y": -0.6980267,
+          "z": -0.0007443036,
+          "w": 0.716071
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 2,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "8b750e83-a2a5-4621-8105-f691904ea070",
+        "position": {
+          "x": -4.70387125,
+          "y": -0.0392589569,
+          "z": 0.119355679
+        },
+        "rotation": {
+          "x": 9.69043249E-05,
+          "y": 0.3644022,
+          "z": -0.00048172372,
+          "w": 0.9312416
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 1,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "33d6ebd7-3646-4d22-95f7-7d45ef713d05",
+        "position": {
+          "x": 4.97851849,
+          "y": -0.04363203,
+          "z": 4.828062
+        },
+        "rotation": {
+          "x": 0.000232151069,
+          "y": 0.750103951,
+          "z": -0.000930805167,
+          "w": 0.6613193
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Dim",
+          "animation": "Offball_Defense_c",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 5,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "4cfb4473-ff9b-442e-8573-bfe44e7d25bf",
+        "position": {
+          "x": -2.991835,
+          "y": -0.0426921844,
+          "z": 1.55949974
+        },
+        "rotation": {
+          "x": 0.000471955,
+          "y": 0.9541677,
+          "z": 6.965927E-05,
+          "w": -0.29927215
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Dim",
+          "animation": "Offball_Defense_c",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 2,
+          "triggers": []
+        }
+      }
+    ],
+    "1": [
+      {
+        "guid": "d3019420-62ed-4aff-baff-0b3ef4553bde",
+        "position": {
+          "x": 3.38904643,
+          "y": -0.0400671959,
+          "z": 3.44999743
+        },
+        "rotation": {
+          "x": 3.23728273E-06,
+          "y": 0.967399955,
+          "z": 8.953175E-08,
+          "w": 0.253253579
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "Offball_Defense_b",
+          "lookAtCamera": false,
+          "delay": 0.0300518274,
+          "number": 1,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "9d0d7a4f-d003-4a6a-886f-606417e96703",
+        "position": {
+          "x": -0.172878742,
+          "y": -0.0421026945,
+          "z": 1.61255693
+        },
+        "rotation": {
+          "x": -1.86001653E-05,
+          "y": 0.9566752,
+          "z": -4.85065539E-05,
+          "w": 0.291157484
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "Offball_Defense_a",
+          "lookAtCamera": false,
+          "delay": 0.0393406153,
+          "number": 2,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "a000c8e1-7e98-4d9f-a203-7186a21f1997",
+        "position": {
+          "x": 2.40875483,
+          "y": -0.0420285463,
+          "z": 9.049963
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.973887563,
+          "z": 0.0,
+          "w": 0.227030829
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "Offball_Defense_c",
+          "lookAtCamera": false,
+          "delay": 0.2675287,
+          "number": 3,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "4a7a17f5-8202-4abd-90c9-e4a995fb5557",
+        "position": {
+          "x": -3.68004537,
+          "y": -0.03756237,
+          "z": 6.28420544
+        },
+        "rotation": {
+          "x": -6.81618531E-07,
+          "y": 0.905883431,
+          "z": 2.82825431E-06,
+          "w": 0.423527181
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "Offball_Defense_b",
+          "lookAtCamera": false,
+          "delay": 0.450272858,
+          "number": 4,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "9727efd9-84c5-4ab0-a1ee-0658480e0da3",
+        "position": {
+          "x": -0.139407635,
+          "y": -0.0405920744,
+          "z": 7.1092906
+        },
+        "rotation": {
+          "x": 2.58572345E-06,
+          "y": 0.9512321,
+          "z": 1.7427443E-06,
+          "w": 0.30847615
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "Offball_Defense_c",
+          "lookAtCamera": false,
+          "delay": 0.5049391,
+          "number": 5,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "86c2abc8-b4ac-46fa-a3c1-2cd58c8b432c",
+        "position": {
+          "x": -1.94732356,
+          "y": -0.0400162935,
+          "z": -0.255283833
+        },
+        "rotation": {
+          "x": -5.699838E-07,
+          "y": 0.00710234838,
+          "z": 1.61588545E-07,
+          "w": 0.9999748
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 4,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "d95dc7b0-eecd-4067-9bfa-a709166efc8d",
+        "position": {
+          "x": 5.849313,
+          "y": -0.0379645824,
+          "z": 4.786405
+        },
+        "rotation": {
+          "x": -1.57348552E-06,
+          "y": -0.5353663,
+          "z": 3.092941E-07,
+          "w": 0.84462
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 1,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "293e6b32-f2ab-4d4d-8f61-5ddcaad62c08",
+        "position": {
+          "x": 4.93645573,
+          "y": -0.04287553,
+          "z": 11.1863
+        },
+        "rotation": {
+          "x": -8.215041E-06,
+          "y": 0.9364195,
+          "z": -7.15782653E-06,
+          "w": -0.350882679
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 2,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "662e6775-8be1-437c-a33d-68e9d3c62a82",
+        "position": {
+          "x": -7.00222969,
+          "y": -0.0424693823,
+          "z": 4.867032
+        },
+        "rotation": {
+          "x": -6.69728E-06,
+          "y": 0.5013596,
+          "z": 5.46099454E-06,
+          "w": 0.8652391
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 3,
+          "triggers": []
+        }
+      }
+    ],
+    "2": [
+      {
+        "guid": "4c4111e0-7420-4e2a-80a0-d68d440fdcd0",
+        "position": {
+          "x": 0.7636051,
+          "y": 0.00117611862,
+          "z": 1.95201254
+        },
+        "rotation": {
+          "x": 3.56661E-05,
+          "y": 0.95197463,
+          "z": -5.78838944E-06,
+          "w": 0.30617702
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "Scene_10_c",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 1,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "4b333081-497a-4569-afb1-5194ab2f0725",
+        "position": {
+          "x": 2.614853,
+          "y": 0.00168192363,
+          "z": -2.57648325
+        },
+        "rotation": {
+          "x": 2.50025878E-05,
+          "y": -0.8197363,
+          "z": 2.14845682E-06,
+          "w": 0.5727412
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Dim",
+          "animation": "Scene_10_b",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 2,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "7d238492-0ef5-46f4-b2c2-2097408ebc40",
+        "position": {
+          "x": -4.214033,
+          "y": 0.00147449947,
+          "z": 6.15312624
+        },
+        "rotation": {
+          "x": -3.92037E-06,
+          "y": 0.9614045,
+          "z": -3.11711256E-06,
+          "w": 0.275138825
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "Scene_10_a",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 3,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "730575aa-49cd-4e64-9766-501013f1fd8a",
+        "position": {
+          "x": 4.05493069,
+          "y": 0.0019316671,
+          "z": 1.41725683
+        },
+        "rotation": {
+          "x": 1.22218648E-06,
+          "y": -0.808661461,
+          "z": 3.37367783E-06,
+          "w": 0.5882743
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Dim",
+          "animation": "Scene_10_a",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 4,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "53322865-8e3c-4e98-8326-8829a82301d6",
+        "position": {
+          "x": 1.20135951,
+          "y": 0.00164723373,
+          "z": 0.286587238
+        },
+        "rotation": {
+          "x": 4.06886029E-05,
+          "y": -0.80597043,
+          "z": 5.73309353E-06,
+          "w": 0.5919559
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "Scene_10_b",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 5,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "8d2074fb-749f-43e8-9e97-865ce61928b8",
+        "position": {
+          "x": 7.561451,
+          "y": 0.002379298,
+          "z": -4.510178
+        },
+        "rotation": {
+          "x": 3.98851535E-06,
+          "y": -0.272964448,
+          "z": 2.69098946E-05,
+          "w": 0.962024152
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 1,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "cef1d38d-764c-4b94-ad84-2426429c98db",
+        "position": {
+          "x": 1.10399055,
+          "y": 0.00187063194,
+          "z": -4.26844549
+        },
+        "rotation": {
+          "x": 3.171654E-05,
+          "y": 0.0130142337,
+          "z": 3.959107E-05,
+          "w": 0.9999153
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 2,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "aa8592cd-e3a0-46a2-97f9-30e479c9dd71",
+        "position": {
+          "x": -1.792767,
+          "y": 0.00117564178,
+          "z": 4.556865
+        },
+        "rotation": {
+          "x": -2.95522223E-05,
+          "y": 0.99976474,
+          "z": 1.20154882E-05,
+          "w": -0.02169072
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 3,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "ba5694b4-4afa-41e3-8110-2a8ab42a5c18",
+        "position": {
+          "x": 5.11053371,
+          "y": 0.000963687664,
+          "z": 11.3232155
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.878821731,
+          "z": 0.0,
+          "w": -0.4771503
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 4,
+          "triggers": []
+        }
+      }
+    ],
+    "3": [
+      {
+        "guid": "f28139f3-94b7-4473-b7e1-741054e1fe6e",
+        "position": {
+          "x": 5.4968977,
+          "y": -0.01091218,
+          "z": 5.713391
+        },
+        "rotation": {
+          "x": 1.2084854E-06,
+          "y": 0.9640866,
+          "z": 2.21410755E-06,
+          "w": 0.265588284
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Dim",
+          "animation": "Scene_02_a",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 4,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "86b35e06-7ea5-489b-8c7d-e326ce154e0f",
+        "position": {
+          "x": 2.35208321,
+          "y": -0.03815365,
+          "z": 3.57274914
+        },
+        "rotation": {
+          "x": -1.07866992E-06,
+          "y": 0.4808889,
+          "z": -2.1860194E-06,
+          "w": 0.8767815
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Scene_02_b",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 4,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "886565e4-4257-4954-8cf6-ff7510b854ff",
+        "position": {
+          "x": 2.0683732,
+          "y": -0.00234878086,
+          "z": 4.481208
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.9462066,
+          "z": 0.0,
+          "w": 0.32356298
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "Scene_02_c",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 5,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "e15250fa-6638-4da5-8997-4c71016061c0",
+        "position": {
+          "x": -2.896158,
+          "y": 0.02123189,
+          "z": 6.69064856
+        },
+        "rotation": {
+          "x": -5.082348E-05,
+          "y": 0.9605507,
+          "z": -3.34540928E-05,
+          "w": 0.27810505
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Dim",
+          "animation": "Offball_Defense_c",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 1,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "2fdd452e-9570-411b-8a07-973794915f33",
+        "position": {
+          "x": -7.10456,
+          "y": 0.021739006,
+          "z": 4.84807062
+        },
+        "rotation": {
+          "x": 1.77062775E-05,
+          "y": 0.4912297,
+          "z": 1.43425113E-05,
+          "w": 0.871030033
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 3,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "a605240d-f85e-469c-9e83-b5d775e91840",
+        "position": {
+          "x": -2.30041718,
+          "y": -0.00265574479,
+          "z": -0.08003569
+        },
+        "rotation": {
+          "x": 2.29741272E-05,
+          "y": 0.0384901874,
+          "z": 1.39466465E-05,
+          "w": 0.999259
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 2,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "22c524a4-db81-4b3b-a33d-c98821eb337a",
+        "position": {
+          "x": 5.28301048,
+          "y": -0.00764882565,
+          "z": 10.8936367
+        },
+        "rotation": {
+          "x": 1.70700569E-05,
+          "y": -0.8640294,
+          "z": -3.97027943E-05,
+          "w": 0.5034414
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 1,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "198752a1-5981-4527-a6e6-f753a2281a63",
+        "position": {
+          "x": -1.8232801,
+          "y": 0.0062687397,
+          "z": 2.70943165
+        },
+        "rotation": {
+          "x": 1.53037763E-05,
+          "y": 0.888858855,
+          "z": -3.00920487E-06,
+          "w": 0.458181232
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Dim",
+          "animation": "Offball_Defense_c",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 3,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "7acf00ba-aaa7-495f-8e90-555931d018df",
+        "position": {
+          "x": 3.60929251,
+          "y": 0.00191163993,
+          "z": 10.053091
+        },
+        "rotation": {
+          "x": 5.785869E-05,
+          "y": 0.4835741,
+          "z": 1.6340904E-05,
+          "w": 0.875303447
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Dim",
+          "animation": "Offball_Defense_c",
+          "lookAtCamera": false,
+          "delay": 0.0,
+          "number": 2,
+          "triggers": []
+        }
+      }
+    ],
+    "4": [
+      {
+        "guid": "7dfadcd2-037c-4422-a9eb-fd727d5ff123",
+        "position": {
+          "x": 1.18,
+          "y": 0.000250637531,
+          "z": -1.01
+        },
+        "rotation": {
+          "x": -3.07960363E-05,
+          "y": 0.8600521,
+          "z": 9.10647141E-05,
+          "w": 0.5102063
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Dim",
+          "animation": "Scene_12_b",
+          "lookAtCamera": false,
+          "delay": 0.0393406153,
+          "number": 2,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "782b914b-d279-4558-b06e-6e5e77db2fa3",
+        "position": {
+          "x": 2.618011,
+          "y": 0.0006566644,
+          "z": -1.54712081
+        },
+        "rotation": {
+          "x": -4.54492636E-07,
+          "y": 0.6661053,
+          "z": 0.000102167818,
+          "w": 0.7458578
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Bright",
+          "animation": "Scene_12_c",
+          "lookAtCamera": false,
+          "delay": 0.0393406153,
+          "number": 2,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "5bd29f10-e4b9-412c-9a94-d39e700336c0",
+        "position": {
+          "x": 3.86505842,
+          "y": 0.000829875469,
+          "z": -1.11423087
+        },
+        "rotation": {
+          "x": -8.912344E-05,
+          "y": 0.98295027,
+          "z": 5.502517E-05,
+          "w": -0.183871612
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Dim",
+          "animation": "Scene_12_a",
+          "lookAtCamera": false,
+          "delay": 0.0393406153,
+          "number": 2,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "336f6a84-6cbb-4578-afa0-b4090fd00224",
+        "position": {
+          "x": 2.55704355,
+          "y": 0.0005927682,
+          "z": -0.588964462
+        },
+        "rotation": {
+          "x": -1.99491169E-05,
+          "y": 0.8015078,
+          "z": 0.000102986982,
+          "w": 0.5979844
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "Offball_Defense_c",
+          "lookAtCamera": false,
+          "delay": 0.0300518274,
+          "number": 4,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "d0690b83-2b05-4815-a81c-ee3146aa5be6",
+        "position": {
+          "x": 1.30707216,
+          "y": 0.000336706638,
+          "z": -0.118803009
+        },
+        "rotation": {
+          "x": -0.01057541,
+          "y": 0.8031155,
+          "z": -0.0100018485,
+          "w": 0.595645666
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "Offball_Defense_a",
+          "lookAtCamera": false,
+          "delay": 0.0300518274,
+          "number": 3,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "04f75279-1c50-4fb6-a03b-10233bb67091",
+        "position": {
+          "x": 3.42094851,
+          "y": -0.000142276287,
+          "z": 5.68244553
+        },
+        "rotation": {
+          "x": 0.000100830992,
+          "y": -0.829562664,
+          "z": -8.012109E-06,
+          "w": 0.558413744
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Bright",
+          "animation": "Offball_Defense_b",
+          "lookAtCamera": false,
+          "delay": 0.0300518274,
+          "number": 1,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "73a1475b-7a75-470c-853c-4ccec02c023e",
+        "position": {
+          "x": -1.03058481,
+          "y": -0.000124633312,
+          "z": 4.097183
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": -0.685492,
+          "z": 0.0,
+          "w": 0.7280802
+        },
+        "data": {
+          "teamType": "Defenders",
+          "appearance": "Dim",
+          "animation": "Offball_Defense_a",
+          "lookAtCamera": false,
+          "delay": 0.0393406153,
+          "number": 2,
+          "triggers": []
+        }
+      },
+      {
+        "guid": "cafa511a-ed94-42df-a318-c98a67fde033",
+        "position": {
+          "x": 2.34173822,
+          "y": -0.000816762447,
+          "z": 8.415365
+        },
+        "rotation": {
+          "x": -6.533871E-05,
+          "y": 0.98134315,
+          "z": 9.534556E-05,
+          "w": 0.192264751
+        },
+        "data": {
+          "teamType": "Attackers",
+          "appearance": "Dim",
+          "animation": "Idle",
+          "lookAtCamera": false,
+          "delay": 0.0393406153,
+          "number": 3,
+          "triggers": []
+        }
+      }
+    ]
+  }
+}

@@ -1,6 +1,7 @@
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Scripting; 
@@ -12,8 +13,17 @@ using UnityEngine.Scripting;
 [System.Serializable]
 public class CharData {
     static readonly Vector2 FieldStandardSize = new Vector2(28f, 15f);
-    static ValueDropdownList<AnimationClip> _animationDropdown = new();
+    static public ValueDropdownList<AnimationClip> _animationDropdown = new();
+    static public AnimationClip GetAnimation(string name) {
+        foreach(var animPair in _animationDropdown) { 
+            if (animPair.Value.name.Equals(name, System.StringComparison.CurrentCultureIgnoreCase))
+                return animPair.Value;
+        }
+        return null;
+    }
+
 #if UNITY_EDITOR   
+
     static CharData() {
         EditorApplication.delayCall += LoadAnimations;
         EditorApplication.projectChanged += LoadAnimations;
