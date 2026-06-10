@@ -17,7 +17,7 @@ MonoBehaviour:
     yRotation: -361.89
     Animation: {fileID: 7400000, guid: e4d5634eff5459d4ab2ae477d6dc485f, type: 2}
     IsFriendly: 0
-  - FieldStandardPosition: {x: 0, y: 0}
+  - FieldStandardPosition: {x: 0.08, y: 0.77}
     yRotation: 0
     Animation: {fileID: 7400000, guid: 5a95f096a073196448e5825df4fc0088, type: 2}
     IsFriendly: 0

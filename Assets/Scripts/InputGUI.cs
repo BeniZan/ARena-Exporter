@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 
 public class InputGUI : MonoBehaviour {
     [SerializeField] CharComponent _charPrefab;
-    [SerializeField] CharSelection _selection;
+    //[SerializeField] CharSelection _selection;
     [SerializeField] FreeCamera _freeCam;
     [SerializeField] AnimationClip[] _allClips;
     bool _isDropdownOpen;
@@ -23,7 +23,7 @@ public class InputGUI : MonoBehaviour {
     }
 
     private void Awake() {
-        _selection.SelectedChar.Sub(OnSelectionChange);
+       // _selection.SelectedChar.Sub(OnSelectionChange);
     }
 
     void OnSelectionChange(CharComponent _) => _isDropdownOpen = false;
@@ -37,7 +37,7 @@ public class InputGUI : MonoBehaviour {
         if (GUILayout.Button("+ Character")) {
             Instantiate(_charPrefab);
         }
-
+        /*
         var selected = _selection.SelectedChar.Value;
         if (selected) {
             if (GUILayout.Button((_isDropdownOpen ? "△" : "▽") + "Animations"))
@@ -45,7 +45,7 @@ public class InputGUI : MonoBehaviour {
             if (_isDropdownOpen) {
                 //DrawDropdown();
             }
-        } 
+        } */
     }
 
     void DrawDropdown(CharComponent selected) {

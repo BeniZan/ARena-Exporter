@@ -3,15 +3,15 @@ using System;
 using System.Security.Cryptography.X509Certificates;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.EventSystems;
-  
+using UnityEngine.Playables;
+
 [ExecuteInEditMode]
 [SelectionBase]
 public class CharComponent : MonoBehaviour {
     [SerializeField] Animator _anim;
-    [SerializeField] EPOOutline.Outlinable _outline;
     public AnimationClip Clip;
-    public Animator Animator => _anim;
     [ShowInInspector, NonSerialized] CharData _data;
     public CharData Data => _data;
     public Transform Head;
@@ -32,22 +32,41 @@ public class CharComponent : MonoBehaviour {
         _data.FieldStandardPosition = transform.position;
         _data.yRotation = transform.rotation.eulerAngles.y; 
     }
-     
-    private void Update() {
-        SetData(_data);
 
+    PlayableGraph _graph;
+    AnimationClipPlayable _clipPlayable;
+    private void OnEnable() {
+        _graph = PlayableGraph.Create("SingleAnimationGraph");
+        _graph.SetTimeUpdateMode(DirectorUpdateMode.Manual);
+        var playableOutput = AnimationPlayableOutput.Create(_graph, "AnimationOutput", _anim);
+        _clipPlayable = AnimationClipPlayable.Create(_graph, null);
+        playableOutput.SetSourcePlayable(_clipPlayable);
+        _graph.Play();
+    }
+
+    private void OnDisable() {
+        _graph.Destroy();
+    } 
+
+    public void SetAnimationTime(float time) {
+        _clipPlayable.SetTime(time);
+        _graph.Evaluate();
+    }
+
+    private void Update() {
+        SetData(_data); 
     }  
+
     void SetAnim(AnimationClip clip) {
         if (clip == Clip)
             return;
-        Clip = clip; 
-        var runtimeController = _anim.runtimeAnimatorController;
-        runtimeController.animationClips[0] = clip;
-        _anim.runtimeAnimatorController = runtimeController; 
-    } 
+        Clip = clip;
+        AnimatorClipInfo[] currentClipInfo = _anim.GetCurrentAnimatorClipInfo(0);
 
-    internal void OnIsSelected(bool isSelected) {
-        _outline.enabled = isSelected;
-    }
+        if (currentClipInfo.Length > 0) {  
+            _override[originalClip] = clip;
+            _anim.Update(0);
+        }
+    }  
 
 }

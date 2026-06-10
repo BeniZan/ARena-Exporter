@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+
+/*
 public class GroupedAnimation : ScriptableObject {
     public string GroupedAnimationName;
     public CharData[] Chars;
@@ -10,13 +12,13 @@ public class CharSelection : MonoBehaviour{
     public Notifier<CharComponent> SelectedChar = new Notifier<CharComponent>();
     
     public void SetSelectChar(CharComponent c) {
-        if (c == SelectedChar.Value)
-            return;
-        if(SelectedChar.Value)
-            SelectedChar.Value.OnIsSelected(false);
-        SelectedChar.Value = c;
-        if (SelectedChar.Value)
-            SelectedChar.Value.OnIsSelected(true);
+        //if (c == SelectedChar.Value)
+       //     return;
+       // if(SelectedChar.Value)
+       //     SelectedChar.Value.OnIsSelected(false);
+       // SelectedChar.Value = c;
+       // if (SelectedChar.Value)
+      //      SelectedChar.Value.OnIsSelected(true);
     }
 
     RealTimer _pressTime;
@@ -40,3 +42,4 @@ public class CharSelection : MonoBehaviour{
     }
 
 }
+*/
