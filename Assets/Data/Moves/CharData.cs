@@ -36,6 +36,7 @@ public class CharData {
 
 
     public Vector2 FieldStandardPosition;
+    [PropertyRange(0f, 360f)]
     public float yRotation;
     [ValueDropdown(nameof(_animationDropdown), AppendNextDrawer = true)]
     public AnimationClip Animation; 

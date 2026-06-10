@@ -101,11 +101,12 @@ public class TeamManeuverEditorWindow : OdinMenuEditorWindow {
             return;
 
         EditorGUI.BeginChangeCheck();
-        var rename = EditorGUILayout.DelayedTextField("Name: ", currentMove.name);   
+        var rename = SirenixEditorFields.DelayedTextField("Name: ", currentMove.name);   
         if (EditorGUI.EndChangeCheck() && rename != currentMove.name) {
             var path = AssetDatabase.GetAssetPath(currentMove);
             AssetDatabase.RenameAsset(path, rename);
         }
+        SirenixEditorGUI.HorizontalLineSeparator(Color.gray);
     }
 
     void DrawAnimationTimeSlider() {

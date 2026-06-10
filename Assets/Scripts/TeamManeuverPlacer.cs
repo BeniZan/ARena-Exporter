@@ -1,5 +1,7 @@
 using Sirenix.OdinInspector;
+#if UNITY_EDITOR
 using Sirenix.Utilities.Editor;
+#endif
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -15,7 +17,6 @@ public class TeamManeuverPlacer : SingletonBehaviors.SingletonMono<TeamManeuverP
     [field: SerializeField, Get] public EditorTeamAnimator EditorAnimator { get; private set; }
 #endif
     public IReadOnlyList<CharComponent> PlacedChars => _placedChars;
-
     public void Activate(TeamManeuver move) {
         if (CurrentActive)
             Deactivate();
@@ -31,6 +32,10 @@ public class TeamManeuverPlacer : SingletonBehaviors.SingletonMono<TeamManeuverP
     public void UpdateChars() {
         if (!CurrentActive)
             return;
+
+        transform.position = CurrentActive.OriginPoint;
+        transform.rotation = Quaternion.Euler(0f, CurrentActive.OriginYRotation, 0f);
+
         int i = 0;
         for (; i < CurrentActive.CharsData.Count; i++) {
             if (_placedChars.Count <= i) {

@@ -27,38 +27,23 @@ public class EditorTeamAnimator : MonoBehaviour {
         RestartAnimation(); 
         ToggleAnimation(false);
     }
-
-    private void OnDisable() {
-        if(AnimationMode.InAnimationMode())
-            AnimationMode.StopAnimationMode();
-    }
-
+     
     private void Update() {
         if (IsRunning)  
             AnimationTime += Time.deltaTime; 
-
-        if (!AnimationMode.InAnimationMode())
-            AnimationMode.StartAnimationMode();
-          
-        AnimationMode.BeginSampling();
-        try {
-            MaxAnimationTime = 0f;
-            foreach (var character in _movePlacer.PlacedChars) {
-                MaxAnimationTime = Mathf.Max(MaxAnimationTime, character.Clip.length);
-                var go = character.Animator.gameObject;
-                var anim = character.Data.Animation;
-                if (character.Data != null && character.Data.Animation != null)
-                    AnimationMode.SampleAnimationClip(go, anim, AnimationTime);
-            }
-            if (AnimationTime >= MaxAnimationTime) {
-                AnimationTime = MaxAnimationTime;
-                IsRunning = false;
-            }
-            AnimationTime = Mathf.Min(AnimationTime, MaxAnimationTime);
-        } catch (System.Exception ex) { } 
-        finally {
-            AnimationMode.EndSampling();
+           
+            
+        MaxAnimationTime = 0f;
+        foreach (var character in _movePlacer.PlacedChars) { 
+            MaxAnimationTime = Mathf.Max(MaxAnimationTime, character.Clip == null ? 0f : character.Clip.length);
+            var anim = character.Data.Animation; 
+            character.SetAnimationTime(AnimationTime);
         }
+        if (AnimationTime >= MaxAnimationTime) {
+            AnimationTime = MaxAnimationTime;
+            IsRunning = false;
+        }
+        AnimationTime = Mathf.Min(AnimationTime, MaxAnimationTime); 
     }
 }
 #endif
