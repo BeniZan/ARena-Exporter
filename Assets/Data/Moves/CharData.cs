@@ -40,6 +40,7 @@ public class CharData {
     public float yRotation;
     [ValueDropdown(nameof(_animationDropdown), AppendNextDrawer = true)]
     public AnimationClip Animation; 
+    public float AnimationTimeOffset;
     public bool IsFriendly;
 
 } 

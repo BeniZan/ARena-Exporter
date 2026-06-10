@@ -50,8 +50,8 @@ public class CharComponent : MonoBehaviour {
     } 
 
     public void SetAnimationTime(float time) {
-        if(_clipPlayable.IsValid())
-            _clipPlayable.SetTime(time);
+        if (_clipPlayable.IsValid())
+            _clipPlayable.SetTime(time + (_data?.AnimationTimeOffset ?? 0f) );
         _graph.Evaluate();
     }
 
