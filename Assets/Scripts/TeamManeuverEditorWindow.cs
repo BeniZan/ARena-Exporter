@@ -11,6 +11,7 @@ using UnityEditor;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static System.Collections.Specialized.BitVector32;
 
 public class TeamManeuverEditorWindow : OdinMenuEditorWindow {
     readonly public string MovesDir = "Assets/Data/Moves";
@@ -84,15 +85,17 @@ public class TeamManeuverEditorWindow : OdinMenuEditorWindow {
     }
 
     protected override void OnBeginDrawEditors() {
-        DrawRename();
+        DrawRename(); 
         base.OnBeginDrawEditors();
     }
 
     protected override void OnEndDrawEditors() { 
         base.OnEndDrawEditors();
         DrawAnimationTimeSlider();
-        if (SirenixEditorGUI.Button("Export Package", ButtonSizes.Medium))
+        var r = EditorGUILayout.GetControlRect(GUILayout.MaxHeight(25));
+        if (SirenixEditorGUI.SDFIconButton(rect: r, "Export Package", SdfIconType.Send))
             ExportPackage();
+        EditorGUILayout.Space(10);
     }
 
     void DrawRename() {
@@ -100,13 +103,30 @@ public class TeamManeuverEditorWindow : OdinMenuEditorWindow {
         if (currentMove == null)
             return;
 
+        EditorGUILayout.BeginHorizontal();
+
         EditorGUI.BeginChangeCheck();
-        var rename = SirenixEditorFields.DelayedTextField("Name: ", currentMove.name);   
+        var rename = SirenixEditorFields.DelayedTextField("Name: ", currentMove.name);
         if (EditorGUI.EndChangeCheck() && rename != currentMove.name) {
             var path = AssetDatabase.GetAssetPath(currentMove);
             AssetDatabase.RenameAsset(path, rename);
         }
+
+        if (TeamManeuverPlacer.Instance && MenuTree.Selection.SelectedValue is TeamManeuver move) {
+            var r = EditorGUILayout.GetControlRect(GUILayout.MaxHeight(17), GUILayout.MaxWidth(30));
+            if (SirenixEditorGUI.SDFIconButton(rect: r, icon: SdfIconType.Trash, iconAlignment: IconAlignment.RightOfText)) {
+                var userConfirm =
+                EditorUtility.DisplayDialog("Delete move", $"Are you sure you want to delete {move.name}?", "Delete", "cancel");
+                if (userConfirm && AssetDatabase.DeleteAsset(AssetDatabase.GetAssetPath(move))) {
+                    AssetDatabase.Refresh();
+                    return;
+                }
+            }
+        }
+         
+        EditorGUILayout.EndHorizontal();
         SirenixEditorGUI.HorizontalLineSeparator(Color.gray);
+
     }
 
     void DrawAnimationTimeSlider() {

@@ -55,7 +55,7 @@ public class TeamManeuverPlacer : SingletonBehaviors.SingletonMono<TeamManeuverP
     private void Update() {
         UpdateChars();
         _courtTf.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
-    }
+    } 
 
     public void Deactivate() {
         foreach (var placedChar in _placedChars)
