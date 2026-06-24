@@ -72,11 +72,11 @@ public class TeamManeuverPlacer : SingletonBehaviors.SingletonMono<TeamManeuverP
         Activate(CurrentActive);
     }
 
-    private void OnGUI() {
+    private void OnDrawGizmosSelected() {
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(transform.position, Vector3.one * 0.1f);
         GizmosU.GizmosArrow(transform.position, transform.rotation.EulerSeperateY() * Vector3.forward);
-    }
+    } 
 
 
 #if UNITY_EDITOR 
