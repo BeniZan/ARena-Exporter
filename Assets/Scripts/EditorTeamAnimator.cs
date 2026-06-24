@@ -36,8 +36,10 @@ public class EditorTeamAnimator : MonoBehaviour {
         MaxAnimationTime = 0f;
         foreach (var character in _movePlacer.PlacedChars) { 
             MaxAnimationTime = Mathf.Max(MaxAnimationTime, character.Clip == null ? 0f : character.Clip.length);
-            var anim = character.Data.Animation; 
-            character.SetAnimationTime(AnimationTime);
+            if(character && character.Data != null) {
+                var anim = character.Data.Animation;
+                character.SetAnimationTime(AnimationTime);
+            }
         }
         if (AnimationTime >= MaxAnimationTime) {
             AnimationTime = MaxAnimationTime;

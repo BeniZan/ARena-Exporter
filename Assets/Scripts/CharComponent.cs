@@ -11,7 +11,7 @@ using UnityEngine.Playables;
 [SelectionBase]
 public class CharComponent : MonoBehaviour {
     [SerializeField] Animator _anim;
-    [ShowInInspector, NonSerialized] CharData _data;
+    [ShowInInspector, SerializeField] CharData _data;
     public CharData Data => _data;
     public Transform Head;
     [ShowInInspector]
@@ -37,7 +37,7 @@ public class CharComponent : MonoBehaviour {
     PlayableGraph _graph;
     AnimationClipPlayable _clipPlayable;
     private void OnEnable() {
-        _anim.fireEvents = false;
+        _anim.fireEvents = true;
         _graph = PlayableGraph.Create("SingleAnimationGraph");
         _graph.SetTimeUpdateMode(DirectorUpdateMode.Manual);
         SetAnim(null); 
@@ -53,6 +53,10 @@ public class CharComponent : MonoBehaviour {
         if (_clipPlayable.IsValid())
             _clipPlayable.SetTime(time + (_data?.AnimationTimeOffset ?? 0f) );
         _graph.Evaluate();
+
+        transform.localPosition += _anim.velocity;
+        //_anim.deltaPosition;
+        transform.localRotation *= _anim.deltaRotation;
     }
 
     private void Update() {
