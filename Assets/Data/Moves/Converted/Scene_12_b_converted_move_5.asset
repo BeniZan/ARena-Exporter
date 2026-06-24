@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa7f63e253653e34893818f789375768, type: 3}
-  m_Name: converted_move_5
+  m_Name: Scene_12_b_converted_move_5
   m_EditorClassIdentifier: Assembly-CSharp::TeamManeuver
   OriginPoint: {x: 0, y: 0, z: 0}
   OriginYRotation: 0

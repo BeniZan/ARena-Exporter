@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
@@ -27,8 +28,8 @@ public class OldConverter : MonoBehaviour
         var path = "Assets/Data/Moves/Converted/";
         foreach (var moveProp in jPropAllMoves.Children()) {
             i++;
-            var move = Convert(moveProp);
-            var fullPath = path + "converted_move_" + i + ".asset";
+            var move = Convert(moveProp, out string animName); 
+            var fullPath = path + animName + "_converted_move_" + i + ".asset";
             AssetDatabase.DeleteAsset(fullPath);
             AssetDatabase.CreateAsset(move, fullPath);
             Debug.Log("Created asset at " + fullPath);
@@ -37,11 +38,15 @@ public class OldConverter : MonoBehaviour
         AssetDatabase.Refresh();
     }
 
-    TeamManeuver Convert(JToken moveProp) {
+    TeamManeuver Convert(JToken moveProp, out string animName) {
         var move = ScriptableObject.CreateInstance<TeamManeuver>();
+        animName = null;
         foreach (var playerData in moveProp.Children().Children()) {
-            var charData = Convert(playerData.ToObject<Data>());
+            var data = playerData.ToObject<Data>();
+            var charData = Convert(data); 
             move.CharsData.Add(charData);
+            if (string.IsNullOrWhiteSpace(animName))
+                animName = data.data.Animation;
         }
         return move;
     }
