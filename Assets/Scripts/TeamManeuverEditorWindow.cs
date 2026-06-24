@@ -129,6 +129,8 @@ public class TeamManeuverEditorWindow : OdinMenuEditorWindow {
 
     }
 
+    bool _loopAnimation;
+
     void DrawAnimationTimeSlider() {
         EditorGUILayout.Space();
         EditorGUILayout.BeginHorizontal();
@@ -139,12 +141,29 @@ public class TeamManeuverEditorWindow : OdinMenuEditorWindow {
         nicefyAnimationTime = float.Parse($"{nicefyAnimationTime:F2}");
         editorAnimator.AnimationTime =
         EditorGUILayout.Slider(nicefyAnimationTime, 0f, editorAnimator.MaxAnimationTime);
-        var btnsRect = EditorGUILayout.GetControlRect(GUILayout.Width(60));
+        var btnsRect = EditorGUILayout.GetControlRect(GUILayout.Width(80));
         var playOrPauseIcon = editorAnimator.IsRunning ? SdfIconType.Pause : SdfIconType.Play;
-        if (SirenixEditorGUI.SDFIconButton(btnsRect.Split(0, 2), playOrPauseIcon, null))
+        if (SirenixEditorGUI.SDFIconButton(btnsRect.Split(0, 3), playOrPauseIcon, null))
             editorAnimator.ToggleAnimation(!editorAnimator.IsRunning);
-        if (SirenixEditorGUI.SDFIconButton(btnsRect.Split(1, 2), SdfIconType.ArrowCounterclockwise, null))
+        if (SirenixEditorGUI.SDFIconButton(btnsRect.Split(1, 3), SdfIconType.ArrowCounterclockwise, null))
             editorAnimator.RestartAnimation();
+
+        bool _wasPushed = false;
+        if (_loopAnimation) {
+            _wasPushed = true;
+            GUIHelper.PushColor(Color.softGreen);
+        }
+
+        if (SirenixEditorGUI.SDFIconButton(btnsRect.Split(2, 3), SdfIconType.ArrowRepeat, null))
+            _loopAnimation = !_loopAnimation;
+
+        if (_wasPushed)
+            GUIHelper.PopColor();
+
+        if (_loopAnimation && editorAnimator.IsRunning && editorAnimator.AnimationTime >= editorAnimator.MaxAnimationTime) {
+            editorAnimator.AnimationTime = 0;
+        }
+
 
         EditorGUILayout.EndHorizontal();
         EditorGUILayout.Space();

@@ -30,22 +30,18 @@ public class EditorTeamAnimator : MonoBehaviour {
      
     private void Update() {
         if (IsRunning)  
-            AnimationTime += Time.deltaTime; 
-           
-            
-        MaxAnimationTime = 0f;
-        foreach (var character in _movePlacer.PlacedChars) { 
-            MaxAnimationTime = Mathf.Max(MaxAnimationTime, character.Clip == null ? 0f : character.Clip.length);
+            AnimationTime += Time.deltaTime;
+
+        foreach (var character in _movePlacer.PlacedChars) {
+            MaxAnimationTime = Mathf.Max(MaxAnimationTime, character.Clip == null ? 0f : character.Clip.length); 
+        }
+        AnimationTime = Mathf.Min(AnimationTime, MaxAnimationTime); 
+        foreach (var character in _movePlacer.PlacedChars) {  
             if(character && character.Data != null) {
                 var anim = character.Data.Animation;
                 character.SetAnimationTime(AnimationTime);
             }
-        }
-        if (AnimationTime >= MaxAnimationTime) {
-            AnimationTime = MaxAnimationTime;
-            IsRunning = false;
-        }
-        AnimationTime = Mathf.Min(AnimationTime, MaxAnimationTime); 
+        }  
     }
 }
 #endif
