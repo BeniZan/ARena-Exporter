@@ -26,26 +26,44 @@ public class EditorTeamAnimator : MonoBehaviour {
     private void OnEnable() { 
         RestartAnimation(); 
         ToggleAnimation(false);
+        if(!AnimationMode.InAnimationMode())
+            AnimationMode.StartAnimationMode();
     }
-     
+    private void OnDisable() {
+        if(AnimationMode.InAnimationMode())
+            AnimationMode.StopAnimationMode();
+    }
     private void Update() {
-        if (IsRunning)  
-            AnimationTime += Time.deltaTime; 
-           
-            
-        MaxAnimationTime = 0f;
-        foreach (var character in _movePlacer.PlacedChars) { 
-            MaxAnimationTime = Mathf.Max(MaxAnimationTime, character.Clip == null ? 0f : character.Clip.length);
-            if(character && character.Data != null) {
-                var anim = character.Data.Animation;
-                character.SetAnimationTime(AnimationTime);
-            }
+        UpdateCurrentAnimTime();
+        UpdatePreviewAnimation();
+    }
+
+    void UpdateCurrentAnimTime() {
+        if(IsRunning)
+            AnimationTime += Time.deltaTime;
+        foreach (var character in _movePlacer.PlacedChars) {
+            MaxAnimationTime = Mathf.Max(MaxAnimationTime, character.Clip == null ? 0f : character.Clip.length); 
         }
         if (AnimationTime >= MaxAnimationTime) {
             AnimationTime = MaxAnimationTime;
             IsRunning = false;
         }
-        AnimationTime = Mathf.Min(AnimationTime, MaxAnimationTime); 
+        AnimationTime = Mathf.Min(AnimationTime, MaxAnimationTime);
     }
+
+    void UpdatePreviewAnimation() {
+        var wasInAnimMode = AnimationMode.InAnimationMode();
+        if (!wasInAnimMode)
+            AnimationMode.StartAnimationMode();
+
+        foreach (var character in _movePlacer.PlacedChars) {
+            if (character && character.Data != null) {
+                var anim = character.Data.Animation;
+                AnimationMode.SampleAnimationClip(character.Animator.gameObject, character.Clip, AnimationTime);
+            }
+        } 
+         
+    }
+
 }
 #endif

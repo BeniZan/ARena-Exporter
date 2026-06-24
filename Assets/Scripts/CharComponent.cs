@@ -13,9 +13,10 @@ public class CharComponent : MonoBehaviour {
     [SerializeField] Animator _anim;
     [ShowInInspector, SerializeField] CharData _data;
     public CharData Data => _data;
-    public Transform Head;
+    public Transform Head; 
     [ShowInInspector]
-    public AnimationClip Clip => _clipPlayable.IsValid() ? _clipPlayable.GetAnimationClip() : null;
+    public AnimationClip Clip { get; private set; }
+    public Animator Animator => _anim;
 
     public void SetData(CharData data) {
         _data = data;
@@ -34,31 +35,19 @@ public class CharComponent : MonoBehaviour {
         _data.yRotation = transform.rotation.eulerAngles.y; 
     }
 
-    PlayableGraph _graph;
-    AnimationClipPlayable _clipPlayable;
     private void OnEnable() {
         _anim.fireEvents = true;
-        _graph = PlayableGraph.Create("SingleAnimationGraph");
-        _graph.SetTimeUpdateMode(DirectorUpdateMode.Manual);
-        SetAnim(null); 
-        _graph.Play();
+        _anim.applyRootMotion = true;
+        _anim.StartPlayback();
+        SetAnim(null);  
     }
 
     private void OnDisable() {
-        if(_graph.IsValid())
-            _graph.Destroy();
-    } 
-
-    public void SetAnimationTime(float time) {
-        if (_clipPlayable.IsValid())
-            _clipPlayable.SetTime(time + (_data?.AnimationTimeOffset ?? 0f) );
-        _graph.Evaluate();
-
-        transform.localPosition += _anim.velocity;
-        //_anim.deltaPosition;
-        transform.localRotation *= _anim.deltaRotation;
+        _anim.StopPlayback(); 
     }
-
+    float _lastUpdate = 0;
+    public void SetAnimationPreviewTime(float time) { 
+    }
     private void Update() {
         SetData(_data); 
     }  
@@ -66,9 +55,7 @@ public class CharComponent : MonoBehaviour {
     void SetAnim(AnimationClip clip) {
         if (clip == Clip)
             return;
-        var playableOutput = AnimationPlayableOutput.Create(_graph, "AnimationOutput", _anim);
-        _clipPlayable = AnimationClipPlayable.Create(_graph, clip);
-        playableOutput.SetSourcePlayable(_clipPlayable);
+        Clip = clip; 
     }  
 
 }
