@@ -33,8 +33,11 @@ public class TeamManeuverPlacer : SingletonBehaviors.SingletonMono<TeamManeuverP
         if (!CurrentActive)
             return;
 
-        transform.position = CurrentActive.OriginPoint;
-        transform.rotation = Quaternion.Euler(0f, CurrentActive.OriginYRotation, 0f);
+        var originPos = CurrentActive.OriginPoint;
+        var originRot = Quaternion.Euler(0f, CurrentActive.OriginYRotation, 0f);
+        if (CurrentActive.MirrorLeftRight)
+            originRot *= Quaternion.Euler(0f, 180f, 0f);
+        transform.SetPositionAndRotation(originPos, originRot);
 
         int i = 0;
         for (; i < CurrentActive.CharsData.Count; i++) {
@@ -43,7 +46,7 @@ public class TeamManeuverPlacer : SingletonBehaviors.SingletonMono<TeamManeuverP
                 spawned.gameObject.SetActive(true);
                 _placedChars.Add(spawned);
             }
-            _placedChars[i].SetData(CurrentActive.CharsData[i]);
+            _placedChars[i].SetData(CurrentActive.CharsData[i], CurrentActive.MirrorLeftRight);
         }
         while(i < _placedChars.Count) {
             if (_placedChars[i])

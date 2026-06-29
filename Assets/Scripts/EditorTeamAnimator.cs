@@ -31,9 +31,11 @@ public class EditorTeamAnimator : MonoBehaviour {
     private void Update() {
         if (IsRunning)  
             AnimationTime += Time.deltaTime;
-
+        MaxAnimationTime = 0f;
         foreach (var character in _movePlacer.PlacedChars) {
-            MaxAnimationTime = Mathf.Max(MaxAnimationTime, character.Clip == null ? 0f : character.Clip.length); 
+            var clipLength = character.Clip == null ? 0f : character.Clip.length;
+            clipLength += character.Data == null ? 0f : Mathf.Abs(character.Data.AnimationTimeOffset);
+            MaxAnimationTime = Mathf.Max(MaxAnimationTime, clipLength); 
         }
         AnimationTime = Mathf.Min(AnimationTime, MaxAnimationTime); 
         foreach (var character in _movePlacer.PlacedChars) {  

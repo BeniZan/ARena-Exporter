@@ -16,7 +16,7 @@ MonoBehaviour:
   OriginYRotation: 0
   CharsData:
   - FieldStandardPosition: {x: 0.7636051, y: 1.9520125}
-    yRotation: 144.34203
+    yRotation: 0
     Animation: {fileID: 7400000, guid: 4f88c6f3cc34e444790621c15ef445b7, type: 2}
     AnimationTimeOffset: 0
     IsFriendly: 0
