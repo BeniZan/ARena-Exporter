@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.bz.unityutils": {
+      "version": "file:../Drills Package",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.tox.unityutils": {
       "version": "https://github.com/ToxPlayers/UnityUtils.git",
       "depth": 0,
