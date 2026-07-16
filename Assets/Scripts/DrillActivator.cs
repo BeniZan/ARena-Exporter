@@ -24,7 +24,8 @@ public class DrillActivator : SingletonBehaviors.SingletonMono<DrillActivator> {
         if (move) 
             CurrentActive = move;
         UpdateChars();
-#if UNITY_EDITOR 
+        RandomizeAllSkins();
+#if UNITY_EDITOR
         SceneView.duringSceneGui -= SceneView_duringSceneGui;
         SceneView.duringSceneGui += SceneView_duringSceneGui;
 #endif
@@ -55,6 +56,13 @@ public class DrillActivator : SingletonBehaviors.SingletonMono<DrillActivator> {
             _placedChars.RemoveAt(i);
         }
     }
+
+    void RandomizeAllSkins() {
+        foreach(var charComp in _placedChars) {
+            charComp.RandomizeSkin();
+        }
+    }
+
 #if UNITY_EDITOR 
     private void Update() {
         UpdateChars(); 

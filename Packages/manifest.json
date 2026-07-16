@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.bz.drills": "https://github.com/BeniZan/Drills.git",
     "com.tox.unityutils": "https://github.com/ToxPlayers/UnityUtils.git",
     "com.unity.ai.navigation": "2.0.10",
     "com.unity.collab-proxy": "2.11.3",

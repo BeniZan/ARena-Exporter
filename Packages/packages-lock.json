@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.bz.drills": {
-      "version": "https://github.com/BeniZan/Drills.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "c682fea7818388ed4b47f441144303611bb8996c"
-    },
     "com.tox.unityutils": {
       "version": "https://github.com/ToxPlayers/UnityUtils.git",
       "depth": 0,
