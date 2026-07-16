@@ -1,5 +1,5 @@
 #Added ignore created drills
-/Assets/Data/Drills/
+/Assets/Data/Drills
 
 # This .gitignore file should be placed at the root of your Unity project directory
 #
@@ -107,5 +107,3 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
-/Assets/Data/Drills
-/Assets/Data/Drills
