@@ -105,7 +105,7 @@ public class DrillActivator : SingletonBehaviors.SingletonMono<DrillActivator> {
 
         Handles.BeginGUI();  
         for (int i = 0; i < _placedChars.Count; i++) {
-            var head = _placedChars[i].Head;
+            var head = _placedChars[i].ActiveSkin.HeadTf;
             var pos = head.position + new Vector3(0, 0.1f, 0);
             var lbl = $"<u>{i}</u>";
             Handles.Label(pos, lbl, _style);
