@@ -101,7 +101,14 @@ public class DrillActivator : SingletonBehaviors.SingletonMono<DrillActivator> {
             _style = new GUIStyle(SirenixGUIStyles.WhiteLabel); 
             _style.richText = true;
             _style.fontSize = 35;
+            _style.alignment = TextAnchor.MiddleCenter;
         }
+
+        Handles.color = Color.orange;
+        Handles.DrawWireDisc(CurrentActive.PlayerStartPosition, Vector3.up, 0.6f);
+        Handles.color = Color.orange;
+        Handles.DrawSolidDisc(CurrentActive.PlayerStartPosition, Vector3.up, 0.45f);
+        Handles.Label(CurrentActive.PlayerStartPosition, "Start Position", _style);
 
         Handles.BeginGUI();  
         for (int i = 0; i < _placedChars.Count; i++) {
