@@ -17,32 +17,12 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'RightLeg_bind' has translation animation
-      that will be discarded.\n\t'LeftUpLeg_bind' has translation animation that
-      will be discarded.\n\t'LeftLeg_bind' has translation animation that will be
-      discarded.\n\t'LeftFoot_bind' has translation animation that will be discarded.\n\t'Spine_bind'
-      has translation animation that will be discarded.\n\t'Spine1_bind' has translation
-      animation that will be discarded.\n\t'Spine2_bind' has translation animation
-      that will be discarded.\n\t'RightForeArm_bind' has translation animation that
-      will be discarded.\n\t'LeftShoulder_bind' has translation animation that will
-      be discarded.\n\t'LeftArm_bind' has translation animation that will be discarded.\n\t'LeftForeArm_bind'
-      has translation animation that will be discarded.\n\t'LeftHand_bind' has translation
-      animation that will be discarded.\n\t'LeftHandPinky1_bind' has translation
-      animation that will be discarded.\n\t'LeftHandPinky2_bind' has translation
-      animation that will be discarded.\n\t'LeftHandPinky3_bind' has translation
-      animation that will be discarded.\n\t'LeftHandRing1_bind' has translation animation
-      that will be discarded.\n\t'LeftHandRing2_bind' has translation animation that
-      will be discarded.\n\t'LeftHandRing3_bind' has translation animation that will
-      be discarded.\n\t'LeftHandMiddle1_bind' has translation animation that will
-      be discarded.\n\t'LeftHandMiddle2_bind' has translation animation that will
-      be discarded.\n\t'Head_bind' has translation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
