@@ -106,5 +106,4 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
 # Auto-generated cache in Assets folder
-/[Aa]ssets/[Ss]ceneDependencyCache*
-Assets/Scripts/Drills-Package/
+/[Aa]ssets/[Ss]ceneDependencyCache* 
