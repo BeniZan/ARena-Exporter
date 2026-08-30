@@ -1,0 +1,1330 @@
+fileFormatVersion: 2
+guid: 4e9553f65ad52dc4f9615fe7d668e253
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bandana
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: 0, z: -6.559628e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bandana1
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: 0, z: -6.559628e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bandana2
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: 0, z: -6.559628e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Character3
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bind_Hierarchy
+      parentName: Character3
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hips_bind
+      parentName: Bind_Hierarchy
+      position: {x: -0.67911786, y: 0.8183353, z: -0.94761}
+      rotation: {x: 0.3226562, y: -0.52047896, z: 0.14173427, w: 0.77775705}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftUpLeg_bind
+      parentName: Hips_bind
+      position: {x: -0.10150199, y: -0.06538071, z: 0.0064077857}
+      rotation: {x: -0.27278936, y: 0.6138976, z: 0.73775357, w: 0.06659819}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftLeg_bind
+      parentName: LeftUpLeg_bind
+      position: {x: 0.00009059006, y: 0.44784048, z: -0.0035453967}
+      rotation: {x: -0.5746028, y: -0.0011888627, z: -0.015013038, w: 0.81829387}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftFoot_bind
+      parentName: LeftLeg_bind
+      position: {x: 0.0000988592, y: 0.40477625, z: 0.0012833222}
+      rotation: {x: 0.6584521, y: -0.015686471, z: 0.036789153, w: 0.7515593}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftToeBase_bind
+      parentName: LeftFoot_bind
+      position: {x: -0.00000021019592, y: 0.17521355, z: 0.000008160203}
+      rotation: {x: 0.3022576, y: 0.025426762, z: -0.008066017, w: 0.95285296}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftToe_End_bind
+      parentName: LeftToeBase_bind
+      position: {x: -1.11402866e-10, y: 0.07357093, z: 3.676643e-11}
+      rotation: {x: -0.016451862, y: 0.015213393, z: 0.02152714, w: 0.99951714}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightUpLeg_bind
+      parentName: Hips_bind
+      position: {x: 0.102727495, y: -0.061901778, z: 0.0082487315}
+      rotation: {x: 0.2364278, y: 0.6648098, z: 0.6834216, w: -0.18725574}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightLeg_bind
+      parentName: RightUpLeg_bind
+      position: {x: -0.00016119155, y: 0.4441075, z: -0.00081291556}
+      rotation: {x: -0.57936496, y: 0.0005504605, z: 0.016039608, w: 0.81491023}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightFoot_bind
+      parentName: RightLeg_bind
+      position: {x: 0.00013851636, y: 0.40300226, z: 0.0006900765}
+      rotation: {x: 0.62586594, y: 0.019405888, z: -0.054184668, w: 0.77780414}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightToeBase_bind
+      parentName: RightFoot_bind
+      position: {x: -0.00346942, y: 0.17146794, z: -0.00020148983}
+      rotation: {x: 0.30932194, y: -0.039457396, z: 0.0030481645, w: 0.95013356}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightToe_End_bind
+      parentName: RightToeBase_bind
+      position: {x: 0.000002941307, y: 0.0736066, z: -0.000004500741}
+      rotation: {x: -0.016865954, y: -0.0003316188, z: -0.021303553, w: 0.99963075}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_bind
+      parentName: Hips_bind
+      position: {x: -0.003794064, y: 0.11132259, z: -0.0045022066}
+      rotation: {x: -0.020798959, y: 0.015577826, z: 0.039414633, w: 0.998885}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine1_bind
+      parentName: Spine_bind
+      position: {x: 0.0000021233209, y: 0.13016836, z: 0.000057589255}
+      rotation: {x: 0.000034396217, y: 0.014742602, z: 0.018057074, w: 0.99972826}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine2_bind
+      parentName: Spine1_bind
+      position: {x: 0.0000011184167, y: 0.14881195, z: 0.000057525827}
+      rotation: {x: 0.0011498908, y: 0.014733446, z: 0.008316175, w: 0.99985623}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftShoulder_bind
+      parentName: Spine2_bind
+      position: {x: -0.061259855, y: 0.14204238, z: -0.00075716275}
+      rotation: {x: 0.58490825, y: -0.39433435, z: 0.5922058, w: 0.38945475}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftArm_bind
+      parentName: LeftShoulder_bind
+      position: {x: -0.000010561146, y: 0.13099766, z: 0.00082202494}
+      rotation: {x: 0.34774718, y: -0.113293834, z: 0.043037277, w: 0.92972267}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftForeArm_bind
+      parentName: LeftArm_bind
+      position: {x: 0.0022885571, y: 0.24654025, z: -0.00015186351}
+      rotation: {x: -0.014469986, y: 0.0012209996, z: -0.29489288, w: 0.95541996}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHand_bind
+      parentName: LeftForeArm_bind
+      position: {x: 0.0009665432, y: 0.32023314, z: -0.00065344974}
+      rotation: {x: -0.12856846, y: -0.24569209, z: 0.044934828, w: 0.9597325}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandIndex1_bind
+      parentName: LeftHand_bind
+      position: {x: 0.034892466, y: 0.093095645, z: -0.0011415182}
+      rotation: {x: 0.043910045, y: -0.0041696876, z: -0.094442494, w: 0.99455273}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandIndex2_bind
+      parentName: LeftHandIndex1_bind
+      position: {x: -0.002058622, y: 0.038556755, z: -0.0000000011035771}
+      rotation: {x: 0.09268591, y: 1.5265567e-16, z: -3.1225023e-17, w: 0.9956954}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandIndex3_bind
+      parentName: LeftHandIndex2_bind
+      position: {x: 0.00014333414, y: 0.035682436, z: -1.2577488e-10}
+      rotation: {x: 0.094981305, y: 8.326673e-17, z: -2.879641e-16, w: 0.99547905}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandIndex4_bind
+      parentName: LeftHandIndex3_bind
+      position: {x: 1.4210854e-16, y: 0.01845247, z: 0}
+      rotation: {x: -1.53291e-40, y: 9.7144515e-17, z: -1.2490008e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandMiddle1_bind
+      parentName: LeftHand_bind
+      position: {x: 0.010639025, y: 0.09489962, z: -0.0031662171}
+      rotation: {x: 0.08792608, y: -0.0024017214, z: -0.027199376, w: 0.9957527}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandMiddle2_bind
+      parentName: LeftHandMiddle1_bind
+      position: {x: -0.0012199194, y: 0.0401693, z: -3.8201037e-10}
+      rotation: {x: 0.085891746, y: -9.714452e-17, z: -2.9143357e-16, w: 0.9963045}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandMiddle3_bind
+      parentName: LeftHandMiddle2_bind
+      position: {x: 0.00051692047, y: 0.037046432, z: -1.8439493e-10}
+      rotation: {x: 0.013067102, y: -2.220446e-16, z: -2.0816682e-17, w: 0.99991465}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandMiddle4_bind
+      parentName: LeftHandMiddle3_bind
+      position: {x: 1.4210854e-16, y: 0.018942598, z: -4.2632563e-16}
+      rotation: {x: 5.551115e-17, y: -2.0816682e-16, z: -1.8041124e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandPinky1_bind
+      parentName: LeftHand_bind
+      position: {x: -0.033545822, y: 0.095290594, z: -0.00899033}
+      rotation: {x: 0.3073503, y: 0.032001693, z: 0.09849284, w: 0.9459444}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandPinky2_bind
+      parentName: LeftHandPinky1_bind
+      position: {x: -0.00042355858, y: 0.033522945, z: -5.3731526e-11}
+      rotation: {x: 0.10805188, y: 8.3266733e-17, z: -5.4904e-16, w: 0.9941453}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandPinky3_bind
+      parentName: LeftHandPinky2_bind
+      position: {x: 0.00042503836, y: 0.026045786, z: 0.0000000011162749}
+      rotation: {x: 0.018360935, y: 8.326673e-17, z: -7.251144e-16, w: 0.99983144}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandPinky4_bind
+      parentName: LeftHandPinky3_bind
+      position: {x: -0, y: 0.016403874, z: 9.947598e-16}
+      rotation: {x: 4.1633363e-17, y: 2.0816682e-16, z: -4.787837e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandRing1_bind
+      parentName: LeftHand_bind
+      position: {x: -0.011985674, y: 0.09714375, z: -0.004773917}
+      rotation: {x: 0.14575846, y: 0.0057272273, z: 0.03884222, w: 0.9885408}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandRing2_bind
+      parentName: LeftHandRing1_bind
+      position: {x: -0.001062069, y: 0.03669912, z: -1.9947123e-10}
+      rotation: {x: 0.115654506, y: -6.938894e-17, z: -4.8572257e-17, w: 0.99328953}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandRing3_bind
+      parentName: LeftHandRing2_bind
+      position: {x: 0.000609156, y: 0.03536019, z: 1.692426e-10}
+      rotation: {x: -0.0036316665, y: -8.326673e-17, z: 7.632783e-17, w: 0.99999344}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandRing4_bind
+      parentName: LeftHandRing3_bind
+      position: {x: 1.3784529e-14, y: 0.019675612, z: 1.4210855e-14}
+      rotation: {x: 2.6367794e-16, y: 1.007768e-39, z: -5.89806e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandThumb1_bind
+      parentName: LeftHand_bind
+      position: {x: 0.029296374, y: 0.026276823, z: 0.017351273}
+      rotation: {x: 0.1991669, y: -0.06595824, z: -0.30738252, w: 0.9281692}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandThumb2_bind
+      parentName: LeftHandThumb1_bind
+      position: {x: 0.006257075, y: 0.033833835, z: 1.1081653e-10}
+      rotation: {x: 0.083346315, y: 1.110223e-16, z: 5.4470317e-16, w: 0.99652064}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandThumb3_bind
+      parentName: LeftHandThumb2_bind
+      position: {x: -0.00031492702, y: 0.03517678, z: -6.9643036e-10}
+      rotation: {x: 0.037159547, y: -1.387779e-17, z: 6.6266437e-16, w: 0.99930936}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandThumb4_bind
+      parentName: LeftHandThumb3_bind
+      position: {x: -1.4210854e-16, y: 0.038993604, z: -5.684342e-16}
+      rotation: {x: 9.020562e-17, y: 5.551115e-17, z: 6.0194905e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck_bind
+      parentName: Spine2_bind
+      position: {x: -6.4592456e-11, y: 0.16744997, z: -0.0000000030510656}
+      rotation: {x: 0.019807054, y: -0.0000000113617595, z: -0.0000000031113905, w: 0.99980384}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_bind
+      parentName: Neck_bind
+      position: {x: 0.00017488576, y: 0.08737441, z: 0.02447776}
+      rotation: {x: 0.06068517, y: 0.19380629, z: -0.084667906, w: 0.9754936}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HeadTop_End_bind
+      parentName: Head_bind
+      position: {x: 0.000000012974382, y: 0.23694457, z: 0.06452506}
+      rotation: {x: -2.7755576e-17, y: 5.551115e-17, z: 1.9428903e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightShoulder_bind
+      parentName: Spine2_bind
+      position: {x: 0.061259855, y: 0.14206216, z: -0.0012562434}
+      rotation: {x: -0.5824054, y: -0.3960489, z: 0.5945403, w: -0.3879061}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightArm_bind
+      parentName: RightShoulder_bind
+      position: {x: 0.000000005977252, y: 0.13076523, z: -0.0000000024775828}
+      rotation: {x: 0.40849838, y: -0.008333157, z: 0.21931688, w: 0.8859796}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightForeArm_bind
+      parentName: RightArm_bind
+      position: {x: 0.00020267868, y: 0.24699247, z: 0.000004488307}
+      rotation: {x: -0.0020009961, y: -0.00039534734, z: 0.15581644, w: 0.9877839}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHand_bind
+      parentName: RightForeArm_bind
+      position: {x: -0.0000000014549616, y: 0.3217274, z: -0.000000005701156}
+      rotation: {x: -0.2926069, y: 0.07010847, z: -0.03969278, w: 0.9528329}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandIndex1_bind
+      parentName: RightHand_bind
+      position: {x: -0.035269134, y: 0.09337766, z: -0.002385717}
+      rotation: {x: 0.07439256, y: 0.0063228193, z: 0.08445095, w: 0.99362665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandIndex2_bind
+      parentName: RightHandIndex1_bind
+      position: {x: 0.0013785103, y: 0.038919907, z: -3.866029e-10}
+      rotation: {x: 0.09735635, y: -2.220446e-16, z: 1.110223e-16, w: 0.99524957}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandIndex3_bind
+      parentName: RightHandIndex2_bind
+      position: {x: -0.0006940881, y: 0.035858206, z: -2.359137e-10}
+      rotation: {x: 0.004311392, y: -1.2490009e-16, z: 4.440892e-16, w: 0.9999907}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandIndex4_bind
+      parentName: RightHandIndex3_bind
+      position: {x: -0, y: 0.01845247, z: 4.7073454e-16}
+      rotation: {x: 1.582663e-39, y: -3.0531133e-16, z: 4.440892e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandMiddle1_bind
+      parentName: RightHand_bind
+      position: {x: -0.010848269, y: 0.09750266, z: -0.0042281053}
+      rotation: {x: 0.11437066, y: 0.0026801294, z: 0.023273475, w: 0.99316186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandMiddle2_bind
+      parentName: RightHandMiddle1_bind
+      position: {x: 0.000951081, y: 0.038796827, z: 6.1625294e-10}
+      rotation: {x: 0.090430684, y: -1.110223e-16, z: 4.9960036e-16, w: 0.9959028}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandMiddle3_bind
+      parentName: RightHandMiddle2_bind
+      position: {x: -0.00065145025, y: 0.03843797, z: -7.405463e-11}
+      rotation: {x: -0.016345942, y: -6.9388946e-17, z: 8.326673e-16, w: 0.9998664}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandMiddle4_bind
+      parentName: RightHandMiddle3_bind
+      position: {x: 1.4210854e-16, y: 0.018942598, z: 1.2256862e-15}
+      rotation: {x: -4.1633363e-17, y: -6.9388946e-17, z: 6.661338e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandPinky1_bind
+      parentName: RightHand_bind
+      position: {x: 0.03364629, y: 0.095159836, z: -0.008308605}
+      rotation: {x: 0.2794077, y: -0.018223908, z: -0.06248163, w: 0.9579641}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandPinky2_bind
+      parentName: RightHandPinky1_bind
+      position: {x: 0.0009787844, y: 0.032921523, z: -7.545324e-11}
+      rotation: {x: 0.15200344, y: 6.3229963e-24, z: 8.326673e-16, w: 0.98838}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandPinky3_bind
+      parentName: RightHandPinky2_bind
+      position: {x: -0.00045125745, y: 0.02685226, z: -0.0000000012594791}
+      rotation: {x: -0.020192808, y: -1.8041124e-16, z: 1.1102229e-15, w: 0.9997961}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandPinky4_bind
+      parentName: RightHandPinky3_bind
+      position: {x: -1.4210854e-16, y: 0.016403874, z: 7.105427e-16}
+      rotation: {x: 8.326673e-17, y: -2.359224e-16, z: 1.0547118e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandRing1_bind
+      parentName: RightHand_bind
+      position: {x: 0.012471119, y: 0.10149223, z: -0.004307605}
+      rotation: {x: 0.16312346, y: -0.0032590923, z: -0.019707652, w: 0.98640347}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandRing2_bind
+      parentName: RightHandRing1_bind
+      position: {x: 0.00094486435, y: 0.035730086, z: -9.461119e-10}
+      rotation: {x: 0.13070501, y: 1.110223e-16, z: 5.551115e-16, w: 0.9914213}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandRing3_bind
+      parentName: RightHandRing2_bind
+      position: {x: -0.0008135885, y: 0.03445116, z: -4.0913653e-10}
+      rotation: {x: -0.04973905, y: -1.2490009e-16, z: 7.771561e-16, w: 0.99876225}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandRing4_bind
+      parentName: RightHandRing3_bind
+      position: {x: 1.3500312e-14, y: 0.019675612, z: 1.4601654e-14}
+      rotation: {x: 1.9428903e-16, y: 1.3877788e-17, z: 6.1062266e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandThumb1_bind
+      parentName: RightHand_bind
+      position: {x: -0.027257588, y: 0.025184503, z: 0.015133287}
+      rotation: {x: 0.18261406, y: 0.06547489, z: 0.3310927, w: 0.92344075}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandThumb2_bind
+      parentName: RightHandThumb1_bind
+      position: {x: -0.0040364102, y: 0.031807344, z: 3.479955e-11}
+      rotation: {x: 0.106588796, y: -7.355228e-16, z: 4.996004e-16, w: 0.9943032}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandThumb3_bind
+      parentName: RightHandThumb2_bind
+      position: {x: -0.0002780105, y: 0.03668459, z: -2.6033753e-10}
+      rotation: {x: -0.06801403, y: -3.7470027e-16, z: 2.7755576e-16, w: 0.99768436}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandThumb4_bind
+      parentName: RightHandThumb3_bind
+      position: {x: 4.2632563e-16, y: 0.038993604, z: -3.2862602e-16}
+      rotation: {x: 1.2490008e-16, y: -4.8572257e-16, z: 5.551115e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Character4
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bind_Hierarchy
+      parentName: Character4
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hips_bind
+      parentName: Bind_Hierarchy
+      position: {x: 1.8448175, y: 0.8614487, z: 0.10005772}
+      rotation: {x: 0.03749018, y: -0.8191145, z: 0.121285014, w: 0.5594067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftUpLeg_bind
+      parentName: Hips_bind
+      position: {x: -0.10273355, y: -0.06286798, z: 0.005711894}
+      rotation: {x: -0.036892697, y: 0.2576056, z: 0.96064806, w: 0.09712641}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftLeg_bind
+      parentName: LeftUpLeg_bind
+      position: {x: 0.000084133964, y: 0.4477875, z: -0.0033228088}
+      rotation: {x: -0.5540957, y: -0.0012034754, z: -0.0144188395, w: 0.83232725}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftFoot_bind
+      parentName: LeftLeg_bind
+      position: {x: -0.00024052057, y: 0.4061607, z: 0.0023598212}
+      rotation: {x: 0.8045146, y: 0.022237876, z: 0.09302792, w: 0.5861805}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftToeBase_bind
+      parentName: LeftFoot_bind
+      position: {x: -0.00000021096582, y: 0.17521355, z: 0.000008162475}
+      rotation: {x: 0.30225837, y: 0.025426837, z: -0.008065752, w: 0.9528528}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftToe_End_bind
+      parentName: LeftToeBase_bind
+      position: {x: -1.1140258e-10, y: 0.07357093, z: 3.6766732e-11}
+      rotation: {x: -0.016451862, y: 0.015213393, z: 0.02152714, w: 0.99951714}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightUpLeg_bind
+      parentName: Hips_bind
+      position: {x: 0.102727495, y: -0.061901778, z: 0.0082487315}
+      rotation: {x: 0.036256168, y: 0.4776078, z: 0.8752069, w: -0.067743525}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightLeg_bind
+      parentName: RightUpLeg_bind
+      position: {x: -0.00015841375, y: 0.44427523, z: -0.00071989023}
+      rotation: {x: -0.48533595, y: 0.0005966294, z: 0.013344001, w: 0.87422574}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightFoot_bind
+      parentName: RightLeg_bind
+      position: {x: 0.0001385199, y: 0.40300223, z: 0.0006900801}
+      rotation: {x: 0.57015866, y: 0.019503912, z: 0.01339529, w: 0.8211938}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightToeBase_bind
+      parentName: RightFoot_bind
+      position: {x: -0.00346942, y: 0.17146794, z: -0.00020148983}
+      rotation: {x: 0.30932257, y: -0.03945739, z: 0.0030481305, w: 0.9501333}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightToe_End_bind
+      parentName: RightToeBase_bind
+      position: {x: 0.000002941307, y: 0.0736066, z: -0.000004500741}
+      rotation: {x: -0.016865954, y: -0.0003316188, z: -0.021303553, w: 0.99963075}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_bind
+      parentName: Hips_bind
+      position: {x: -0.00045983284, y: 0.111565046, z: -0.0041633244}
+      rotation: {x: -0.017422602, y: -0.01863782, z: -0.0022667088, w: 0.99967194}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine1_bind
+      parentName: Spine_bind
+      position: {x: 0.0000015308465, y: 0.13026537, z: -0.00007266079}
+      rotation: {x: 0.000046258192, y: -0.018599039, z: -0.0067704334, w: 0.9998041}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine2_bind
+      parentName: Spine1_bind
+      position: {x: 0.0000019744775, y: 0.1488938, z: -0.00007266301}
+      rotation: {x: -0.0019344663, y: -0.018575871, z: -0.012657851, w: 0.9997455}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftShoulder_bind
+      parentName: Spine2_bind
+      position: {x: -0.061259855, y: 0.14204238, z: -0.0007571627}
+      rotation: {x: 0.58490825, y: -0.39433435, z: 0.5922058, w: 0.38945475}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftArm_bind
+      parentName: LeftShoulder_bind
+      position: {x: -0.0018644115, y: 0.13094272, z: -0.00030494522}
+      rotation: {x: 0.25892276, y: 0.13891803, z: 0.14492255, w: 0.9448059}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftForeArm_bind
+      parentName: LeftArm_bind
+      position: {x: 0.008706107, y: 0.23806916, z: -0.0006154974}
+      rotation: {x: -0.047077958, y: 0.0011601245, z: -0.77896136, w: 0.6253011}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHand_bind
+      parentName: LeftForeArm_bind
+      position: {x: 0.00009002791, y: 0.3199918, z: -0.0008996339}
+      rotation: {x: -0.15168273, y: -0.13368881, z: 0.047551017, w: 0.9781915}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandIndex1_bind
+      parentName: LeftHand_bind
+      position: {x: 0.034892466, y: 0.093095645, z: -0.0011415182}
+      rotation: {x: 0.043910045, y: -0.0041696876, z: -0.094442494, w: 0.99455273}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandIndex2_bind
+      parentName: LeftHandIndex1_bind
+      position: {x: -0.002058622, y: 0.038556755, z: -0.0000000011035763}
+      rotation: {x: 0.09268591, y: 2.0816682e-16, z: -4.1633363e-17, w: 0.9956954}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandIndex3_bind
+      parentName: LeftHandIndex2_bind
+      position: {x: 0.00014333414, y: 0.035682436, z: -1.2577488e-10}
+      rotation: {x: 0.094981305, y: 1.110223e-16, z: -7.979728e-17, w: 0.99547905}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandIndex4_bind
+      parentName: LeftHandIndex3_bind
+      position: {x: -0, y: 0.01845247, z: 0}
+      rotation: {x: -1.541423e-39, y: 1.3877789e-16, z: 1.0061396e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandMiddle1_bind
+      parentName: LeftHand_bind
+      position: {x: 0.010639025, y: 0.09489962, z: -0.0031662171}
+      rotation: {x: 0.08792608, y: -0.0024017214, z: -0.027199376, w: 0.9957527}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandMiddle2_bind
+      parentName: LeftHandMiddle1_bind
+      position: {x: -0.0012199194, y: 0.0401693, z: -3.820091e-10}
+      rotation: {x: 0.085891746, y: -2.9143357e-16, z: -2.9143357e-16, w: 0.9963045}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandMiddle3_bind
+      parentName: LeftHandMiddle2_bind
+      position: {x: 0.00051692047, y: 0.037046432, z: -1.8439579e-10}
+      rotation: {x: 0.013067102, y: -4.1633366e-16, z: -1.3183898e-16, w: 0.99991465}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandMiddle4_bind
+      parentName: LeftHandMiddle3_bind
+      position: {x: 2.842171e-16, y: 0.018942598, z: 0}
+      rotation: {x: 8.326673e-17, y: -4.996003e-16, z: -1.8388069e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandPinky1_bind
+      parentName: LeftHand_bind
+      position: {x: -0.033545822, y: 0.095290594, z: -0.00899033}
+      rotation: {x: 0.3073503, y: 0.032001693, z: 0.09849284, w: 0.9459444}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandPinky2_bind
+      parentName: LeftHandPinky1_bind
+      position: {x: -0.00042355858, y: 0.033522945, z: -5.372982e-11}
+      rotation: {x: 0.10805188, y: -4.0245585e-16, z: -6.9302203e-16, w: 0.9941453}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandPinky3_bind
+      parentName: LeftHandPinky2_bind
+      position: {x: 0.00042503836, y: 0.026045786, z: 0.0000000011162734}
+      rotation: {x: 0.018360935, y: -5.689893e-16, z: -1.210837e-15, w: 0.99983144}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandPinky4_bind
+      parentName: LeftHandPinky3_bind
+      position: {x: -2.842171e-16, y: 0.016403874, z: 5.684342e-16}
+      rotation: {x: 2.220446e-16, y: -4.3021142e-16, z: -8.500145e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandRing1_bind
+      parentName: LeftHand_bind
+      position: {x: -0.011985674, y: 0.09714375, z: -0.004773917}
+      rotation: {x: 0.14575846, y: 0.0057272273, z: 0.03884222, w: 0.9885408}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandRing2_bind
+      parentName: LeftHandRing1_bind
+      position: {x: -0.001062069, y: 0.03669912, z: -1.994701e-10}
+      rotation: {x: 0.115654506, y: -4.440892e-16, z: -3.7296555e-16, w: 0.99328953}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandRing3_bind
+      parentName: LeftHandRing2_bind
+      position: {x: 0.000609156, y: 0.03536019, z: 1.6924104e-10}
+      rotation: {x: -0.0036316665, y: -7.0776723e-16, z: -3.5735306e-16, w: 0.99999344}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandRing4_bind
+      parentName: LeftHandRing3_bind
+      position: {x: 1.3926637e-14, y: 0.019675612, z: 1.4779288e-14}
+      rotation: {x: 5.1347815e-16, y: -4.0245585e-16, z: -2.220446e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandThumb1_bind
+      parentName: LeftHand_bind
+      position: {x: 0.029296374, y: 0.026276823, z: 0.017351273}
+      rotation: {x: 0.1991669, y: -0.06595824, z: -0.30738252, w: 0.9281692}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandThumb2_bind
+      parentName: LeftHandThumb1_bind
+      position: {x: 0.006257075, y: 0.033833835, z: 1.1081653e-10}
+      rotation: {x: 0.083346315, y: -2.775558e-17, z: 7.077672e-16, w: 0.99652064}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandThumb3_bind
+      parentName: LeftHandThumb2_bind
+      position: {x: -0.00031492702, y: 0.03517678, z: -6.9643047e-10}
+      rotation: {x: 0.037159547, y: 1.387779e-17, z: 9.263423e-16, w: 0.99930936}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandThumb4_bind
+      parentName: LeftHandThumb3_bind
+      position: {x: 2.1316282e-16, y: 0.038993604, z: -4.2632563e-16}
+      rotation: {x: 4.0245585e-16, y: -5.551115e-17, z: 8.0144225e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck_bind
+      parentName: Spine2_bind
+      position: {x: 8.129618e-11, y: 0.16744997, z: -0.0000000030063838}
+      rotation: {x: 0.01980705, y: 1.338131e-10, z: -2.5404498e-10, w: 0.99980384}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_bind
+      parentName: Neck_bind
+      position: {x: 0.00009909111, y: 0.08712215, z: 0.024332494}
+      rotation: {x: -0.020379638, y: 0.15916733, z: -0.0031079717, w: 0.98703635}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HeadTop_End_bind
+      parentName: Head_bind
+      position: {x: 0.000000012974382, y: 0.23694457, z: 0.06452506}
+      rotation: {x: -2.7755576e-17, y: -5.551115e-17, z: 2.4980015e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightShoulder_bind
+      parentName: Spine2_bind
+      position: {x: 0.061259855, y: 0.14206216, z: -0.0012562434}
+      rotation: {x: -0.5824054, y: -0.3960489, z: 0.5945403, w: -0.3879061}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightArm_bind
+      parentName: RightShoulder_bind
+      position: {x: -0.000000004261409, y: 0.13076523, z: -0.00000000207432}
+      rotation: {x: 0.38762933, y: 0.16463418, z: -0.10721191, w: 0.9006357}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightForeArm_bind
+      parentName: RightArm_bind
+      position: {x: -0.0030922305, y: 0.24594152, z: -0.000069710964}
+      rotation: {x: -0.0071216803, y: -0.0004131614, z: 0.38812786, w: 0.92157793}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHand_bind
+      parentName: RightForeArm_bind
+      position: {x: 0.0000000016468162, y: 0.3217274, z: 0.000000002562271}
+      rotation: {x: -0.032503724, y: 0.19879137, z: -0.047894955, w: 0.978331}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandIndex1_bind
+      parentName: RightHand_bind
+      position: {x: -0.035269134, y: 0.09337766, z: -0.002385717}
+      rotation: {x: 0.07439256, y: 0.0063228193, z: 0.08445095, w: 0.99362665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandIndex2_bind
+      parentName: RightHandIndex1_bind
+      position: {x: 0.0013785103, y: 0.038919907, z: -3.8660244e-10}
+      rotation: {x: 0.09735635, y: -1.9428903e-16, z: 5.5511148e-17, w: 0.99524957}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandIndex3_bind
+      parentName: RightHandIndex2_bind
+      position: {x: -0.0006940881, y: 0.035858206, z: -2.359144e-10}
+      rotation: {x: 0.004311392, y: -1.8041124e-16, z: 4.440892e-16, w: 0.9999907}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandIndex4_bind
+      parentName: RightHandIndex3_bind
+      position: {x: 1.4210854e-16, y: 0.01845247, z: 5.684342e-16}
+      rotation: {x: 4.1633363e-17, y: -2.7755576e-17, z: 2.220446e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandMiddle1_bind
+      parentName: RightHand_bind
+      position: {x: -0.010848269, y: 0.09750266, z: -0.0042281053}
+      rotation: {x: 0.11437066, y: 0.0026801294, z: 0.023273475, w: 0.99316186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandMiddle2_bind
+      parentName: RightHandMiddle1_bind
+      position: {x: 0.000951081, y: 0.038796827, z: 6.16253e-10}
+      rotation: {x: 0.090430684, y: -1.6653345e-16, z: 2.7755576e-16, w: 0.9959028}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandMiddle3_bind
+      parentName: RightHandMiddle2_bind
+      position: {x: -0.00065145025, y: 0.03843797, z: -7.405475e-11}
+      rotation: {x: -0.016345942, y: -5.551116e-17, z: 4.996004e-16, w: 0.9998664}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandMiddle4_bind
+      parentName: RightHandMiddle3_bind
+      position: {x: 2.842171e-16, y: 0.018942598, z: 8.5265126e-16}
+      rotation: {x: -1.2490008e-16, y: -5.551115e-17, z: 3.330669e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandPinky1_bind
+      parentName: RightHand_bind
+      position: {x: 0.03364629, y: 0.095159836, z: -0.008308605}
+      rotation: {x: 0.2794077, y: -0.018223908, z: -0.06248163, w: 0.9579641}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandPinky2_bind
+      parentName: RightHandPinky1_bind
+      position: {x: 0.0009787844, y: 0.032921523, z: -7.545339e-11}
+      rotation: {x: 0.15200344, y: -1.3877789e-16, z: 3.8857809e-16, w: 0.98838}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandPinky3_bind
+      parentName: RightHandPinky2_bind
+      position: {x: -0.00045125745, y: 0.02685226, z: -0.0000000012594793}
+      rotation: {x: -0.020192808, y: -2.359224e-16, z: 6.661338e-16, w: 0.9997961}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandPinky4_bind
+      parentName: RightHandPinky3_bind
+      position: {x: -4.2632563e-16, y: 0.016403874, z: 8.5265126e-16}
+      rotation: {x: 4.1633363e-17, y: -2.4980015e-16, z: 6.1062266e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandRing1_bind
+      parentName: RightHand_bind
+      position: {x: 0.012471119, y: 0.10149223, z: -0.004307605}
+      rotation: {x: 0.16312346, y: -0.0032590923, z: -0.019707652, w: 0.98640347}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandRing2_bind
+      parentName: RightHandRing1_bind
+      position: {x: 0.00094486435, y: 0.035730086, z: -9.461125e-10}
+      rotation: {x: 0.13070501, y: -2.7755576e-17, z: 3.6614058e-26, w: 0.9914213}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandRing3_bind
+      parentName: RightHandRing2_bind
+      position: {x: -0.0008135885, y: 0.03445116, z: -4.0913617e-10}
+      rotation: {x: -0.04973905, y: -8.326673e-17, z: 3.8857806e-16, w: 0.99876225}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandRing4_bind
+      parentName: RightHandRing3_bind
+      position: {x: 1.3216095e-14, y: 0.019675612, z: 1.4210855e-14}
+      rotation: {x: 9.7144515e-17, y: -2.0816682e-16, z: 1.110223e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandThumb1_bind
+      parentName: RightHand_bind
+      position: {x: -0.027257588, y: 0.025184503, z: 0.015133287}
+      rotation: {x: 0.18261406, y: 0.06547489, z: 0.3310927, w: 0.92344075}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandThumb2_bind
+      parentName: RightHandThumb1_bind
+      position: {x: -0.0040364102, y: 0.031807344, z: 3.479954e-11}
+      rotation: {x: 0.106588796, y: -6.7307276e-16, z: 6.106227e-16, w: 0.9943032}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandThumb3_bind
+      parentName: RightHandThumb2_bind
+      position: {x: -0.0002780105, y: 0.03668459, z: -2.6033772e-10}
+      rotation: {x: -0.06801403, y: -6.1062266e-16, z: 4.996004e-16, w: 0.99768436}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandThumb4_bind
+      parentName: RightHandThumb3_bind
+      position: {x: 7.105427e-16, y: 0.038993604, z: -2.842171e-16}
+      rotation: {x: 4.1633363e-17, y: -4.8572257e-16, z: 2.220446e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Character5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bind_Hierarchy
+      parentName: Character5
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hips_bind
+      parentName: Bind_Hierarchy
+      position: {x: 1.5588142, y: 0.96361977, z: -0.5022227}
+      rotation: {x: 0.06228389, y: -0.6052616, z: 0.05790345, w: 0.79147094}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftUpLeg_bind
+      parentName: Hips_bind
+      position: {x: -0.09985079, y: -0.06369158, z: 0.003956961}
+      rotation: {x: -0.40474817, y: 0.25005683, z: 0.87395966, w: 0.09922198}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftLeg_bind
+      parentName: LeftUpLeg_bind
+      position: {x: 0.00003456173, y: 0.44690296, z: -0.0015886315}
+      rotation: {x: -0.3656453, y: -0.0012974167, z: -0.008999735, w: 0.93070984}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftFoot_bind
+      parentName: LeftLeg_bind
+      position: {x: 0.00006873942, y: 0.40394163, z: 0.00081953354}
+      rotation: {x: 0.61018056, y: -0.026739353, z: -0.03351621, w: 0.7911014}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftToeBase_bind
+      parentName: LeftFoot_bind
+      position: {x: -0.0000002094612, y: 0.17521355, z: 0.000008163431}
+      rotation: {x: 0.30225864, y: 0.025426667, z: -0.008066235, w: 0.95285267}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftToe_End_bind
+      parentName: LeftToeBase_bind
+      position: {x: -1.1140315e-10, y: 0.07357093, z: 3.676675e-11}
+      rotation: {x: -0.016451862, y: 0.015213393, z: 0.02152714, w: 0.99951714}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightUpLeg_bind
+      parentName: Hips_bind
+      position: {x: 0.102727495, y: -0.061901778, z: 0.0082487315}
+      rotation: {x: 0.25634408, y: 0.19310944, z: 0.946931, w: -0.017837558}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightLeg_bind
+      parentName: RightUpLeg_bind
+      position: {x: -0.00015291534, y: 0.44446632, z: -0.0005336315}
+      rotation: {x: -0.3445166, y: 0.0006485677, z: 0.009318753, w: 0.93873376}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightFoot_bind
+      parentName: RightLeg_bind
+      position: {x: 0.00013851692, y: 0.40300226, z: 0.00069007435}
+      rotation: {x: 0.6566546, y: 0.00069139875, z: -0.035629485, w: 0.75334907}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightToeBase_bind
+      parentName: RightFoot_bind
+      position: {x: -0.00346942, y: 0.17146794, z: -0.00020148983}
+      rotation: {x: 0.30932376, y: -0.039457366, z: 0.003048079, w: 0.95013297}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightToe_End_bind
+      parentName: RightToeBase_bind
+      position: {x: 0.000002941307, y: 0.0736066, z: -0.000004500741}
+      rotation: {x: -0.016865954, y: -0.0003316188, z: -0.021303553, w: 0.99963075}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_bind
+      parentName: Hips_bind
+      position: {x: 0.005629004, y: 0.111570545, z: -0.0042127296}
+      rotation: {x: -0.018266415, y: -0.005106112, z: -0.040466927, w: 0.99900085}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine1_bind
+      parentName: Spine_bind
+      position: {x: 0.00000021336353, y: 0.13026224, z: -0.000017008308}
+      rotation: {x: 0.0002639833, y: -0.0043544224, z: -0.005969812, w: 0.9999727}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine2_bind
+      parentName: Spine1_bind
+      position: {x: 0.00000092062083, y: 0.148787, z: -0.00001704585}
+      rotation: {x: -0.00007948766, y: -0.004363997, z: 0.01471578, w: 0.9998822}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftShoulder_bind
+      parentName: Spine2_bind
+      position: {x: -0.061259855, y: 0.14204238, z: -0.00075716275}
+      rotation: {x: 0.58490825, y: -0.39433435, z: 0.5922058, w: 0.38945475}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftArm_bind
+      parentName: LeftShoulder_bind
+      position: {x: 0.0002593555, y: 0.13092336, z: 0.0016728272}
+      rotation: {x: 0.42484355, y: -0.17026193, z: 0.017678505, w: 0.8889355}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftForeArm_bind
+      parentName: LeftArm_bind
+      position: {x: 0.0036105167, y: 0.24597754, z: -0.00024112455}
+      rotation: {x: -0.019177979, y: 0.0012376878, z: -0.36641836, w: 0.9302517}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHand_bind
+      parentName: LeftForeArm_bind
+      position: {x: 0.00002969338, y: 0.3211568, z: -0.0006212965}
+      rotation: {x: -0.00833431, y: -0.16224985, z: 0.10491714, w: 0.98112077}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandIndex1_bind
+      parentName: LeftHand_bind
+      position: {x: 0.034892466, y: 0.093095645, z: -0.0011415182}
+      rotation: {x: 0.043910045, y: -0.0041696876, z: -0.094442494, w: 0.99455273}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandIndex2_bind
+      parentName: LeftHandIndex1_bind
+      position: {x: -0.002058622, y: 0.038556755, z: -0.0000000011035767}
+      rotation: {x: 0.09268591, y: -2.7755574e-17, z: 1.2490009e-16, w: 0.9956954}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandIndex3_bind
+      parentName: LeftHandIndex2_bind
+      position: {x: 0.00014333414, y: 0.035682436, z: -1.2577481e-10}
+      rotation: {x: 0.094981305, y: 1.9428903e-16, z: 1.0408341e-17, w: 0.99547905}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandIndex4_bind
+      parentName: LeftHandIndex3_bind
+      position: {x: 5.684342e-16, y: 0.01845247, z: 0}
+      rotation: {x: 8.326673e-17, y: 3.7470027e-16, z: 1.0408341e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandMiddle1_bind
+      parentName: LeftHand_bind
+      position: {x: 0.010639025, y: 0.09489962, z: -0.0031662171}
+      rotation: {x: 0.08792608, y: -0.0024017214, z: -0.027199376, w: 0.9957527}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandMiddle2_bind
+      parentName: LeftHandMiddle1_bind
+      position: {x: -0.0012199194, y: 0.0401693, z: -3.8201e-10}
+      rotation: {x: 0.085891746, y: 5.551116e-17, z: -1.31839e-16, w: 0.9963045}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandMiddle3_bind
+      parentName: LeftHandMiddle2_bind
+      position: {x: 0.00051692047, y: 0.037046432, z: -1.8439507e-10}
+      rotation: {x: 0.013067102, y: 5.587589e-26, z: 9.7144515e-17, w: 0.99991465}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandMiddle4_bind
+      parentName: LeftHandMiddle3_bind
+      position: {x: 2.842171e-16, y: 0.018942598, z: -2.1316282e-16}
+      rotation: {x: 2.7755576e-17, y: 2.7755576e-17, z: -6.938894e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandPinky1_bind
+      parentName: LeftHand_bind
+      position: {x: -0.033545822, y: 0.095290594, z: -0.00899033}
+      rotation: {x: 0.3073503, y: 0.032001693, z: 0.09849284, w: 0.9459444}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandPinky2_bind
+      parentName: LeftHandPinky1_bind
+      position: {x: -0.00042355858, y: 0.033522945, z: -5.3731027e-11}
+      rotation: {x: 0.10805188, y: 9.714452e-17, z: -2.8969882e-16, w: 0.9941453}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandPinky3_bind
+      parentName: LeftHandPinky2_bind
+      position: {x: 0.00042503836, y: 0.026045786, z: 0.0000000011162747}
+      rotation: {x: 0.018360935, y: -2.7755574e-17, z: -6.002143e-16, w: 0.99983144}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandPinky4_bind
+      parentName: LeftHandPinky3_bind
+      position: {x: -2.842171e-16, y: 0.016403874, z: 1.1368684e-15}
+      rotation: {x: 6.9388946e-17, y: 1.110223e-16, z: -3.0531133e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandRing1_bind
+      parentName: LeftHand_bind
+      position: {x: -0.011985674, y: 0.09714375, z: -0.004773917}
+      rotation: {x: 0.14575846, y: 0.0057272273, z: 0.03884222, w: 0.9885408}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandRing2_bind
+      parentName: LeftHandRing1_bind
+      position: {x: -0.001062069, y: 0.03669912, z: -1.9947016e-10}
+      rotation: {x: 0.115654506, y: -5.551115e-17, z: -1.5612513e-17, w: 0.99328953}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandRing3_bind
+      parentName: LeftHandRing2_bind
+      position: {x: 0.000609156, y: 0.03536019, z: 1.6924133e-10}
+      rotation: {x: -0.0036316665, y: -4.1633367e-17, z: 1.1990978e-26, w: 0.99999344}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandRing4_bind
+      parentName: LeftHandRing3_bind
+      position: {x: 1.3926637e-14, y: 0.019675612, z: 1.4210855e-14}
+      rotation: {x: 1.6653345e-16, y: 5.551115e-17, z: 1.3530843e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandThumb1_bind
+      parentName: LeftHand_bind
+      position: {x: 0.029296374, y: 0.026276823, z: 0.017351273}
+      rotation: {x: 0.1991669, y: -0.06595824, z: -0.30738252, w: 0.9281692}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandThumb2_bind
+      parentName: LeftHandThumb1_bind
+      position: {x: 0.006257075, y: 0.033833835, z: 1.108161e-10}
+      rotation: {x: 0.083346315, y: 2.6367797e-16, z: 2.9143354e-16, w: 0.99652064}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandThumb3_bind
+      parentName: LeftHandThumb2_bind
+      position: {x: -0.00031492702, y: 0.03517678, z: -6.964302e-10}
+      rotation: {x: 0.037159547, y: 2.4980018e-16, z: 3.330669e-16, w: 0.99930936}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHandThumb4_bind
+      parentName: LeftHandThumb3_bind
+      position: {x: -1.4210854e-16, y: 0.038993604, z: 1.4210854e-16}
+      rotation: {x: 3.4694473e-17, y: 2.4980015e-16, z: 2.1510571e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck_bind
+      parentName: Spine2_bind
+      position: {x: 1.914536e-11, y: 0.16744997, z: -0.0000000030036866}
+      rotation: {x: 0.019807063, y: -2.1197294e-10, z: -5.867329e-11, w: 0.99980384}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_bind
+      parentName: Neck_bind
+      position: {x: 0.00015717882, y: 0.086926095, z: 0.024467135}
+      rotation: {x: -0.0399457, y: 0.19345905, z: 0.052671295, w: 0.9788788}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HeadTop_End_bind
+      parentName: Head_bind
+      position: {x: 0.000000012974382, y: 0.23694457, z: 0.06452506}
+      rotation: {x: -1.110223e-16, y: -5.551115e-17, z: 2.220446e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightShoulder_bind
+      parentName: Spine2_bind
+      position: {x: 0.061259855, y: 0.14206216, z: -0.0012562434}
+      rotation: {x: -0.5824054, y: -0.3960489, z: 0.5945403, w: -0.3879061}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightArm_bind
+      parentName: RightShoulder_bind
+      position: {x: -0.000000002096019, y: 0.13076523, z: -0.0000000030789578}
+      rotation: {x: 0.41796845, y: 0.15619692, z: -0.01970589, w: 0.89471596}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightForeArm_bind
+      parentName: RightArm_bind
+      position: {x: -0.001704769, y: 0.2466019, z: -0.00003812391}
+      rotation: {x: -0.0048983954, y: -0.00040825224, z: 0.28773662, w: 0.957697}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHand_bind
+      parentName: RightForeArm_bind
+      position: {x: -6.383942e-10, y: 0.3217274, z: 9.385226e-10}
+      rotation: {x: -0.11298678, y: 0.2114198, z: 0.03576184, w: 0.9701839}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandIndex1_bind
+      parentName: RightHand_bind
+      position: {x: -0.035269134, y: 0.09337766, z: -0.002385717}
+      rotation: {x: 0.07439256, y: 0.0063228193, z: 0.08445095, w: 0.99362665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandIndex2_bind
+      parentName: RightHandIndex1_bind
+      position: {x: 0.0013785103, y: 0.038919907, z: -3.866028e-10}
+      rotation: {x: 0.09735635, y: 2.7755576e-17, z: -5.551115e-17, w: 0.99524957}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandIndex3_bind
+      parentName: RightHandIndex2_bind
+      position: {x: -0.0006940881, y: 0.035858206, z: -2.3591382e-10}
+      rotation: {x: 0.004311392, y: 1.3877788e-17, z: 4.440892e-16, w: 0.9999907}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandIndex4_bind
+      parentName: RightHandIndex3_bind
+      position: {x: -2.842171e-16, y: 0.01845247, z: 4.2632563e-16}
+      rotation: {x: 5.551115e-17, y: -5.551115e-17, z: 2.7755578e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandMiddle1_bind
+      parentName: RightHand_bind
+      position: {x: -0.010848269, y: 0.09750266, z: -0.0042281053}
+      rotation: {x: 0.11437066, y: 0.0026801294, z: 0.023273475, w: 0.99316186}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandMiddle2_bind
+      parentName: RightHandMiddle1_bind
+      position: {x: 0.000951081, y: 0.038796827, z: 6.162532e-10}
+      rotation: {x: 0.090430684, y: 1.110223e-16, z: 1.110223e-16, w: 0.9959028}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandMiddle3_bind
+      parentName: RightHandMiddle2_bind
+      position: {x: -0.00065145025, y: 0.03843797, z: -7.405461e-11}
+      rotation: {x: -0.016345942, y: 1.249001e-16, z: 5.5511157e-16, w: 0.9998664}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandMiddle4_bind
+      parentName: RightHandMiddle3_bind
+      position: {x: -1.4210854e-16, y: 0.018942598, z: 1.2789769e-15}
+      rotation: {x: -1.110223e-16, y: 1.6653345e-16, z: 2.7755578e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandPinky1_bind
+      parentName: RightHand_bind
+      position: {x: 0.03364629, y: 0.095159836, z: -0.008308605}
+      rotation: {x: 0.2794077, y: -0.018223908, z: -0.06248163, w: 0.9579641}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandPinky2_bind
+      parentName: RightHandPinky1_bind
+      position: {x: 0.0009787844, y: 0.032921523, z: -7.5452956e-11}
+      rotation: {x: 0.15200344, y: 5.551116e-17, z: 5.551116e-17, w: 0.98838}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandPinky3_bind
+      parentName: RightHandPinky2_bind
+      position: {x: -0.00045125745, y: 0.02685226, z: -0.0000000012594796}
+      rotation: {x: -0.020192808, y: 2.7755576e-17, z: 3.8857806e-16, w: 0.9997961}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandPinky4_bind
+      parentName: RightHandPinky3_bind
+      position: {x: -0, y: 0.016403874, z: 8.5265126e-16}
+      rotation: {x: 1.3877789e-16, y: -5.551115e-17, z: 3.330669e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandRing1_bind
+      parentName: RightHand_bind
+      position: {x: 0.012471119, y: 0.10149223, z: -0.004307605}
+      rotation: {x: 0.16312346, y: -0.0032590923, z: -0.019707652, w: 0.98640347}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandRing2_bind
+      parentName: RightHandRing1_bind
+      position: {x: 0.00094486435, y: 0.035730086, z: -9.46112e-10}
+      rotation: {x: 0.13070501, y: -2.7755576e-17, z: -5.551115e-17, w: 0.9914213}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandRing3_bind
+      parentName: RightHandRing2_bind
+      position: {x: -0.0008135885, y: 0.03445116, z: -4.091366e-10}
+      rotation: {x: -0.04973905, y: -8.326673e-17, z: 3.8857806e-16, w: 0.99876225}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandRing4_bind
+      parentName: RightHandRing3_bind
+      position: {x: 1.3500312e-14, y: 0.019675612, z: 1.4495072e-14}
+      rotation: {x: 9.7144515e-17, y: 2.7755576e-17, z: 2.220446e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandThumb1_bind
+      parentName: RightHand_bind
+      position: {x: -0.027257588, y: 0.025184503, z: 0.015133287}
+      rotation: {x: 0.18261406, y: 0.06547489, z: 0.3310927, w: 0.92344075}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandThumb2_bind
+      parentName: RightHandThumb1_bind
+      position: {x: -0.0040364102, y: 0.031807344, z: 3.4799965e-11}
+      rotation: {x: 0.106588796, y: -5.3429483e-16, z: 4.996004e-16, w: 0.9943032}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandThumb3_bind
+      parentName: RightHandThumb2_bind
+      position: {x: -0.0002780105, y: 0.03668459, z: -2.6033717e-10}
+      rotation: {x: -0.06801403, y: -4.3021142e-16, z: 4.4408918e-16, w: 0.99768436}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHandThumb4_bind
+      parentName: RightHandThumb3_bind
+      position: {x: 8.6985974e-16, y: 0.038993604, z: -2.842171e-16}
+      rotation: {x: 1.5265567e-16, y: -2.4980015e-16, z: 2.220446e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eye3
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eye4
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eye5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eye_5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eye_6
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eye_7
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hair3
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hair4
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hair5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hand_left3
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -7.105427e-17, y: -2.842171e-16, z: 2.4424906e-17}
+      rotation: {x: -3.469447e-18, y: 9.62965e-35, z: -2.7755576e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hand_left4
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -7.105427e-17, y: -2.842171e-16, z: 2.4424906e-17}
+      rotation: {x: -3.469447e-18, y: 9.62965e-35, z: -2.7755576e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hand_left5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -7.105427e-17, y: -2.842171e-16, z: 2.4424906e-17}
+      rotation: {x: -3.469447e-18, y: 9.62965e-35, z: -2.7755576e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hand_right3
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -7.105427e-17, y: -4.2632563e-16, z: -5.3290704e-17}
+      rotation: {x: -1.7347235e-17, y: 5.551115e-17, z: -6.8370513e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hand_right4
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -7.105427e-17, y: -4.2632563e-16, z: -5.3290704e-17}
+      rotation: {x: -1.7347235e-17, y: 5.551115e-17, z: -6.8370513e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hand_right5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -7.105427e-17, y: -4.2632563e-16, z: -5.3290704e-17}
+      rotation: {x: -1.7347235e-17, y: 5.551115e-17, z: -6.8370513e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head3
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -2.842171e-16, y: 0, z: 0}
+      rotation: {x: -1.7347235e-18, y: 0, z: -6.559628e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head4
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -2.842171e-16, y: 0, z: 0}
+      rotation: {x: -1.7347235e-18, y: 0, z: -6.559628e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -2.842171e-16, y: 0, z: 0}
+      rotation: {x: -1.7347235e-18, y: 0, z: -6.559628e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: legs3
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -7.105427e-17, y: 0, z: 0}
+      rotation: {x: 3.469447e-18, y: -5.529431e-18, z: -1.7347235e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: legs4
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -7.105427e-17, y: 0, z: 0}
+      rotation: {x: 3.469447e-18, y: -5.529431e-18, z: -1.7347235e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: legs5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -7.105427e-17, y: 0, z: 0}
+      rotation: {x: 3.469447e-18, y: -5.529431e-18, z: -1.7347235e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shirt4
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -2.1316282e-16, y: -2.842171e-16, z: 1.7763568e-17}
+      rotation: {x: 3.469447e-18, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shirt5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -2.1316282e-16, y: -2.842171e-16, z: 1.7763568e-17}
+      rotation: {x: 3.469447e-18, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shirt6
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -2.1316282e-16, y: -2.842171e-16, z: 1.7763568e-17}
+      rotation: {x: 3.469447e-18, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shoes3
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 5.3290704e-17, y: 0, z: -3.1086245e-17}
+      rotation: {x: 5.551115e-17, y: -6.620384e-34, z: -1.1926224e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shoes4
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 5.3290704e-17, y: 0, z: -3.1086245e-17}
+      rotation: {x: 5.551115e-17, y: -6.620384e-34, z: -1.1926224e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shoes5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 5.3290704e-17, y: 0, z: -3.1086245e-17}
+      rotation: {x: 5.551115e-17, y: -6.620384e-34, z: -1.1926224e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shorts3
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -3.5527136e-17, y: 0, z: -8.881784e-18}
+      rotation: {x: -6.938894e-18, y: 1.7347235e-18, z: -7.806256e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shorts4
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -3.5527136e-17, y: 0, z: -8.881784e-18}
+      rotation: {x: -6.938894e-18, y: 1.7347235e-18, z: -7.806256e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shorts5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: -3.5527136e-17, y: 0, z: -8.881784e-18}
+      rotation: {x: -6.938894e-18, y: 1.7347235e-18, z: -7.806256e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: socks3
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 7.105427e-17, y: 0, z: -2.6645352e-17}
+      rotation: {x: 5.551115e-17, y: -1.1254653e-33, z: -2.027458e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: socks4
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 7.105427e-17, y: 0, z: -2.6645352e-17}
+      rotation: {x: 5.551115e-17, y: -1.1254653e-33, z: -2.027458e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: socks5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 7.105427e-17, y: 0, z: -2.6645352e-17}
+      rotation: {x: 5.551115e-17, y: -1.1254653e-33, z: -2.027458e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teeth3
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teeth4
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teeth5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tongue3
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tongue4
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tongue5
+      parentName: Pick & Roll Hard Switch 001_take004_2026-08-13_10-34-14(Clone)
+      position: {x: 2.7755575e-19, y: 0, z: 0}
+      rotation: {x: -9.8607613e-32, y: -1.2246469e-16, z: -2.7260807e-31, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

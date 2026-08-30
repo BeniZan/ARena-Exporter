@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text; 
 [ExecuteInEditMode] 
 public class DrillAnimator : MonoBehaviour {
-    [SerializeField] DrillActivator _movePlacer;
+    [SerializeField] ExporterDrillActivator _movePlacer;
     public float AnimationTime = 0;
     public bool IsRunning { get; private set; }
     public float MaxAnimationTime { get; private set; }

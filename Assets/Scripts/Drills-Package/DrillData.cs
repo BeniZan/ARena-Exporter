@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using System.IO;
+using System;
+using Sirenix.OdinInspector.Editor;
+
+
 #if UNITY_EDITOR
 using Sirenix.Utilities.Editor;
 #endif
@@ -24,18 +28,19 @@ public class DrillData : ScriptableObject {
     public bool MirrorLeftRight;
 
     [BoxGroup("Player Position")]
-    public Vector3 LocalPlayerStartPosition;
-    public Vector3 PlayerStartPosition {
-        get {
-            return 
-                Matrix4x4.TRS(OriginPoint, Quaternion.Euler(0, OriginYRotation, 0), Vector3.one)
-                .MultiplyPoint(LocalPlayerStartPosition);
-        }
-    }
+    public Vector2 _localPlayerStartPosXZ;
+    public Vector3 LocalPlayerStartPosition => _localPlayerStartPosXZ.XZToXYZ();
+    [ListDrawerSettings(OnBeginListElementGUI = nameof(OnTriggerBeginGUI), 
+                        OnEndListElementGUI = nameof(OnTriggerEndGUI) ,ShowFoldout = false)]
+    [LabelText(SdfIconType.Compass, Text = "Triggers"), BoxGroup("Player Position"), SerializeField]
+    List<Vector2> _triggersXZ = new();
+
+    public IReadOnlyList<Vector2> TriggersXZ => _triggersXZ;
 
 
-    [PropertyOrder(100), ListDrawerSettings(OnBeginListElementGUI = nameof(OnBeginItemGUI), ShowFoldout = false)] 
+    [PropertyOrder(100), ListDrawerSettings(OnBeginListElementGUI = nameof(OnCharDataGUI), ShowFoldout = false)] 
     public List<CharData> CharsData = new List<CharData>();
+     
 
 #if UNITY_EDITOR
     [Button(icon: SdfIconType.HexagonHalf), PropertyOrder( -101)] void DuplicateMirror() {
@@ -56,7 +61,21 @@ public class DrillData : ScriptableObject {
     }
 #endif
 
-    void OnBeginItemGUI(int idx){
+    void OnTriggerBeginGUI(int idx) {
+#if UNITY_EDITOR
+        EditorGUILayout.BeginHorizontal();
+        var rect = EditorGUILayout.GetControlRect(GUILayout.MaxWidth(20));
+        SdfIcons.DrawIcon(rect,SdfIconType.Compass);
+        EditorGUILayout.LabelField("[" + idx.ToString() + "]", GUILayout.MaxWidth(20));
+#endif
+    }
+    void OnTriggerEndGUI(int idx) {
+#if UNITY_EDITOR 
+        EditorGUILayout.EndHorizontal();
+#endif
+    }
+
+    void OnCharDataGUI(int idx){
 #if UNITY_EDITOR
         SirenixEditorGUI.Title("Player: " + idx.ToString(), "",TextAlignment.Left, true, true);
         EditorGUILayout.Space();

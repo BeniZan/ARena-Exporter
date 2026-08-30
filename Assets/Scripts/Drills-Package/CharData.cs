@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -49,8 +50,20 @@ public class CharData {
     [PropertyRange(0f, 360f)]
     public float yRotation;
     [ValueDropdown(nameof(_animationDropdown), AppendNextDrawer = true)]
-    public AnimationClip Animation; 
+    public AnimationClip Animation;
     public float AnimationTimeOffset;
     public bool IsFriendly;
+    public List<CharAnimationTrigger> AnimationTriggers = new();
+
+    [Serializable]
+    public struct CharAnimationTrigger {
+#if DRILL_EXPORT_EDITOR
+        static public int MAX_TRIGGER_IDX = 0;
+        [PropertyRange(0, nameof(MAX_TRIGGER_IDX))]
+#endif
+        public int TriggerIndex; 
+        [SerializeField] AnimationClip TriggeredClip;
+    }
+
 
 } 

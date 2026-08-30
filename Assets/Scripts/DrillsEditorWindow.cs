@@ -39,7 +39,7 @@ public class DrillsEditorWindow : OdinMenuEditorWindow {
 
     private void OnProjectChange() {
         ForceMenuTreeRebuild();
-        var placer = DrillActivator.Instance;
+        var placer = ExporterDrillActivator.Instance;
         if (placer && placer.CurrentActive) {
             var activeItem =
                 MenuTree.EnumerateTree().First(i => (i.Value as DrillData) == placer.CurrentActive);
@@ -99,7 +99,7 @@ public class DrillsEditorWindow : OdinMenuEditorWindow {
     }
 
     void DrawRename() {
-        var currentMove = DrillActivator.Instance.CurrentActive;
+        var currentMove = ExporterDrillActivator.Instance.CurrentActive;
         if (currentMove == null)
             return;
 
@@ -112,7 +112,7 @@ public class DrillsEditorWindow : OdinMenuEditorWindow {
             AssetDatabase.RenameAsset(path, rename);
         }
 
-        if (DrillActivator.Instance && MenuTree.Selection.SelectedValue is DrillData move) {
+        if (ExporterDrillActivator.Instance && MenuTree.Selection.SelectedValue is DrillData move) {
             var r = EditorGUILayout.GetControlRect(GUILayout.MaxHeight(17), GUILayout.MaxWidth(30));
             if (SirenixEditorGUI.SDFIconButton(rect: r, icon: SdfIconType.Trash, iconAlignment: IconAlignment.RightOfText)) {
                 var userConfirm =
@@ -136,7 +136,7 @@ public class DrillsEditorWindow : OdinMenuEditorWindow {
         EditorGUILayout.BeginHorizontal();
         EditorGUILayout.LabelField("Time: ", GUILayout.MaxWidth(100)); 
 
-        var editorAnimator = DrillActivator.Instance.Animator;
+        var editorAnimator = ExporterDrillActivator.Instance.Animator;
         var nicefyAnimationTime = editorAnimator.AnimationTime;
         nicefyAnimationTime = float.Parse($"{nicefyAnimationTime:F2}");
         editorAnimator.AnimationTime =
@@ -215,7 +215,7 @@ public class DrillsEditorWindow : OdinMenuEditorWindow {
             } 
         }
 
-        var placer = DrillActivator.Instance;
+        var placer = ExporterDrillActivator.Instance;
         if (!placer)
            Debug.LogError("placer not found");
 
