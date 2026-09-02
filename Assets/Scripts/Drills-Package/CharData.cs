@@ -13,7 +13,6 @@ using UnityEngine.Scripting;
 [ExecuteInEditMode]
 [System.Serializable]
 public class CharData {
-    static readonly Vector2 FieldStandardSize = new Vector2(28f, 15f);
     static public ValueDropdownList<AnimationClip> _animationDropdown = new();
     static public AnimationClip GetAnimation(string name) {
         foreach(var animPair in _animationDropdown) { 
@@ -55,6 +54,10 @@ public class CharData {
     public bool IsFriendly;
     public List<CharAnimationTrigger> AnimationTriggers = new();
 
+    /// <summary>
+    /// Gates a clip behind one of the drill's triggers: the character holds on frame
+    /// zero until that trigger fires, then plays <see cref="TriggeredClip"/>.
+    /// </summary>
     [Serializable]
     public struct CharAnimationTrigger {
 #if DRILL_EXPORT_EDITOR
@@ -62,7 +65,9 @@ public class CharData {
         [PropertyRange(0, nameof(MAX_TRIGGER_IDX))]
 #endif
         public int TriggerIndex; 
-        [SerializeField] AnimationClip TriggeredClip;
+        public AnimationClip TriggeredClip;
+        /// <summary>Staggers characters that all react to the same trigger.</summary>
+        [Min(0f)] public float DelayAfterTrigger;
     }
 
 

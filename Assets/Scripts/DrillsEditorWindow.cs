@@ -14,7 +14,27 @@ using UnityEngine.UIElements;
 using static System.Collections.Specialized.BitVector32;
 
 public class DrillsEditorWindow : OdinMenuEditorWindow {
-    readonly public string MovesDir = "Assets/Data/Drills";
+    public const string MovesDir = "Assets/Data/Drills";
+
+    /// <summary>
+    /// Rewrites every drill asset so fields added since they were last saved actually
+    /// land on disk. Unity only serializes a new field once the owning asset is dirtied.
+    /// </summary>
+    [MenuItem("Tools/Drills/Reserialize All Drills")]
+    private static void ReserializeAllDrills() {
+        var paths = AssetDatabase.FindAssets("t:" + nameof(DrillData), new[] { MovesDir })
+                                 .Select(AssetDatabase.GUIDToAssetPath)
+                                 .ToArray();
+        if (paths.Length == 0) {
+            Debug.LogWarning($"No {nameof(DrillData)} assets found under {MovesDir}");
+            return;
+        }
+
+        AssetDatabase.ForceReserializeAssets(paths);
+        AssetDatabase.SaveAssets();
+        Debug.Log($"Reserialized {paths.Length} drills under {MovesDir}");
+    }
+
     [MenuItem("Window/Drills Editor")]
     private static void OpenWindow() {
         var win = GetWindow<DrillsEditorWindow>();
@@ -186,7 +206,10 @@ public class DrillsEditorWindow : OdinMenuEditorWindow {
             var moves =  MenuTree.MenuItems.Select(i => i.Value as DrillData)
                                             .Where(i => i);
             var paths = moves.Select(m => AssetDatabase.GetAssetPath(m)).ToArray();
-            AssetDatabase.ExportPackage(paths, saveLocation, ExportPackageOptions.IncludeDependencies | ExportPackageOptions.Interactive);
+            // No IncludeDependencies: the clips, scripts and prefabs the drills point at
+            // all live in com.bz.drills, which the consuming project already has. Bundling
+            // them would ship ~145MB of duplicate GUIDs and duplicate type definitions.
+            AssetDatabase.ExportPackage(paths, saveLocation, ExportPackageOptions.Interactive);
             EditorApplication.delayCall += () => {
                 Application.OpenURL($"file://[{saveLocation}]");
             };  

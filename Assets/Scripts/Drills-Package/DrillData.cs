@@ -11,6 +11,20 @@ using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities.Editor;
 #endif
 
+[Serializable]
+public struct DrillTrigger {
+    public string Name;
+    public Vector2 FieldStandardPosition;
+    /// <summary>
+    /// When the local player is expected to reach this trigger. Drives the editor
+    /// scrubber, and gives the runtime a timeout so a drill cannot stall if the
+    /// player never walks into the trigger.
+    /// </summary>
+    [Min(0f)] public float NominalTime;
+
+    public Vector3 LocalPosition => CourtSpace.ToLocal(FieldStandardPosition);
+}
+
 [System.Serializable]
 public class DrillData : ScriptableObject {
     public enum Category { 
@@ -28,14 +42,21 @@ public class DrillData : ScriptableObject {
     public bool MirrorLeftRight;
 
     [BoxGroup("Player Position")]
-    public Vector2 _localPlayerStartPosXZ;
-    public Vector3 LocalPlayerStartPosition => _localPlayerStartPosXZ.XZToXYZ();
-    [ListDrawerSettings(OnBeginListElementGUI = nameof(OnTriggerBeginGUI), 
-                        OnEndListElementGUI = nameof(OnTriggerEndGUI) ,ShowFoldout = false)]
+    public Vector2 _localPlayerStartPos;
+    public Vector3 LocalPlayerStartPosition => CourtSpace.ToLocal(_localPlayerStartPos);
+    [ListDrawerSettings(OnBeginListElementGUI = nameof(OnTriggerBeginGUI), ShowFoldout = false)]
     [LabelText(SdfIconType.Compass, Text = "Triggers"), BoxGroup("Player Position"), SerializeField]
-    List<Vector2> _triggersXZ = new();
+    List<DrillTrigger> _triggers = new();
 
-    public IReadOnlyList<Vector2> TriggersXZ => _triggersXZ;
+    public IReadOnlyList<DrillTrigger> Triggers => _triggers;
+
+#if UNITY_EDITOR
+    public void SetTriggerPosition(int idx, Vector2 fieldStandard) {
+        var trigger = _triggers[idx];
+        trigger.FieldStandardPosition = fieldStandard;
+        _triggers[idx] = trigger;
+    }
+#endif
 
 
     [PropertyOrder(100), ListDrawerSettings(OnBeginListElementGUI = nameof(OnCharDataGUI), ShowFoldout = false)] 
@@ -48,9 +69,17 @@ public class DrillData : ScriptableObject {
         mirror.name += "_mirror";
         mirror.OriginPoint.x = -mirror.OriginPoint.x;
         mirror.OriginYRotation = -mirror.OriginYRotation;
+        // Left-to-right is world X, which is the width component of a field-standard
+        // pair, so it is .y that flips here and not .x.
         foreach(var c in mirror.CharsData) {
             c.yRotation = -c.yRotation;
-            c.FieldStandardPosition.x = -c.FieldStandardPosition.x;
+            c.FieldStandardPosition.y = -c.FieldStandardPosition.y;
+        }
+        mirror._localPlayerStartPos.y = -mirror._localPlayerStartPos.y;
+        for (int i = 0; i < mirror._triggers.Count; i++) {
+            var trigger = mirror._triggers[i];
+            trigger.FieldStandardPosition.y = -trigger.FieldStandardPosition.y;
+            mirror._triggers[i] = trigger;
         }
 
         var path = AssetDatabase.GetAssetPath(this);
@@ -63,16 +92,17 @@ public class DrillData : ScriptableObject {
 
     void OnTriggerBeginGUI(int idx) {
 #if UNITY_EDITOR
-        EditorGUILayout.BeginHorizontal();
-        var rect = EditorGUILayout.GetControlRect(GUILayout.MaxWidth(20));
-        SdfIcons.DrawIcon(rect,SdfIconType.Compass);
-        EditorGUILayout.LabelField("[" + idx.ToString() + "]", GUILayout.MaxWidth(20));
+        SirenixEditorGUI.Title(TriggerLabel(idx), "", TextAlignment.Left, true, true);
 #endif
     }
-    void OnTriggerEndGUI(int idx) {
-#if UNITY_EDITOR 
-        EditorGUILayout.EndHorizontal();
-#endif
+
+    public string TriggerLabel(int idx) {
+        if (idx < 0 || idx >= _triggers.Count)
+            return "Trigger [" + idx + "]";
+        var name = _triggers[idx].Name;
+        return string.IsNullOrWhiteSpace(name)
+            ? "Trigger [" + idx + "]"
+            : "Trigger [" + idx + "] " + name;
     }
 
     void OnCharDataGUI(int idx){

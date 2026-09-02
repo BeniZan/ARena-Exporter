@@ -35,7 +35,7 @@ public class ExporterDrillActivator : SingletonBehaviors.SingletonMono<ExporterD
     public void UpdateChars() {
         if (!CurrentActive)
             return;
-        CharAnimationTrigger.MAX_TRIGGER_IDX = CurrentActive.TriggersXZ.Count;
+        CharAnimationTrigger.MAX_TRIGGER_IDX = Mathf.Max(0, CurrentActive.Triggers.Count - 1);
         var originPos = CurrentActive.OriginPoint;
         var originRot = Quaternion.Euler(0f, CurrentActive.OriginYRotation, 0f);
         if (CurrentActive.MirrorLeftRight)
@@ -105,13 +105,25 @@ public class ExporterDrillActivator : SingletonBehaviors.SingletonMono<ExporterD
             };
         var color = Color.softGreen;
         DrawTrigger(CurrentActive.LocalPlayerStartPosition, color, "Start Position");
-        var triggersXZ = CurrentActive.TriggersXZ;
-        for(int i=0; i < triggersXZ.Count; i++) { 
+        if (TryDragToField(CurrentActive.LocalPlayerStartPosition, out var startField)) {
+            Undo.RecordObject(CurrentActive, "Move Player Start");
+            CurrentActive._localPlayerStartPos = startField;
+            EditorUtility.SetDirty(CurrentActive);
+        }
+
+        var triggers = CurrentActive.Triggers;
+        for(int i=0; i < triggers.Count; i++) { 
             Color.RGBToHSV(color, out var h, out var s, out var v);
             h += (i+1) * 0.1f;
             h = Mathf.Repeat(h, 1f);
             color = Color.HSVToRGB(h, s, v);
-            DrawTrigger(triggersXZ[i].XZToXYZ(), color, $"<u>{i}</u>");
+            var localPos = triggers[i].LocalPosition;
+            DrawTrigger(localPos, color, $"<u>{i}</u>");
+            if (TryDragToField(localPos, out var triggerField)) {
+                Undo.RecordObject(CurrentActive, "Move Trigger");
+                CurrentActive.SetTriggerPosition(i, triggerField);
+                EditorUtility.SetDirty(CurrentActive);
+            }
         } 
 
         Handles.BeginGUI();  
@@ -130,6 +142,22 @@ public class ExporterDrillActivator : SingletonBehaviors.SingletonMono<ExporterD
         Handles.DrawWireDisc(trigPos, Vector3.up, 0.6f);
         Handles.DrawSolidDisc(trigPos, Vector3.up, 0.45f);
         Handles.Label(trigPos, label, _style);
+    }
+
+    /// <summary>
+    /// Draws a move handle at a court-local point and reports the dragged result back
+    /// in field-standard coordinates. Height is dropped, so the handle stays on the floor.
+    /// </summary>
+    bool TryDragToField(Vector3 localPosition, out Vector2 fieldStandard) {
+        fieldStandard = default;
+        var worldPos = _courtTf.TransformPoint(localPosition);
+        EditorGUI.BeginChangeCheck();
+        var moved = Handles.PositionHandle(worldPos, _courtTf.rotation);
+        if (!EditorGUI.EndChangeCheck())
+            return false;
+
+        fieldStandard = CourtSpace.ToField(_courtTf.InverseTransformPoint(moved));
+        return true;
     }
 
 #endif

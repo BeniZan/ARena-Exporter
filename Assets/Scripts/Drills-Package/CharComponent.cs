@@ -41,10 +41,15 @@ public class CharComponent : MonoBehaviour {
             RecreateGraph();
 
         if(data != null) { 
-            var pos = new Vector3(data.FieldStandardPosition.y,0,data.FieldStandardPosition.x);
+            var pos = CourtSpace.ToLocal(data.FieldStandardPosition);
             var rot = Quaternion.Euler(0, data.yRotation, 0);
             transform.SetLocalPositionAndRotation(pos, rot);
-            SetAnim(data.Animation);
+            // While a drill is being scrubbed the animator owns the clip slot, and this
+            // runs every editor frame, so only push the base clip when it actually changes.
+            if (_appliedBaseAnimation != data.Animation) {
+                _appliedBaseAnimation = data.Animation;
+                SetAnim(data.Animation);
+            }
             if(_controllerPlayable.IsValid())
                 _controllerPlayable.SetBool(AV_MirrorHash, mirror);
                 
@@ -99,7 +104,8 @@ public class CharComponent : MonoBehaviour {
         RecreateGraph();
     } 
     AnimatorControllerPlayable _controllerPlayable;
-    AnimatorOverrideController _overrideAnimation; 
+    AnimatorOverrideController _overrideAnimation;
+    AnimationClip _appliedBaseAnimation;
     void RecreateGraph() {
         if (!_anim.runtimeAnimatorController) {
             Debug.LogError("Animator does not have a runtime animator controller assigned. Please assign one in the inspector.");
@@ -111,7 +117,8 @@ public class CharComponent : MonoBehaviour {
         if(_anim.runtimeAnimatorController != _overrideAnimation)
             _anim.runtimeAnimatorController = _overrideAnimation;
 
-        SetAnim(Data?.Animation);
+        _appliedBaseAnimation = Data?.Animation;
+        SetAnim(_appliedBaseAnimation);
 
         if (IsExportEditor) {
             if (_graph.IsValid())
@@ -144,7 +151,31 @@ public class CharComponent : MonoBehaviour {
         var clip = _overrideAnimation.animationClips[0];
         var duration = clip ? clip.length : 0f;
         var normalized = (duration == 0f || actualTime < 0f) ? 0f : actualTime / duration;
+        ApplyNormalizedTime(normalized);
+    } 
 
+    /// <summary>
+    /// Drives one segment of a trigger gated drill. <paramref name="localTime"/> is
+    /// measured from the moment the segment opened, and clamps at both ends: a
+    /// character still waiting for its trigger sits on frame zero, and one that has
+    /// run out of clip holds its last frame.
+    /// </summary>
+    public void SetSegment(AnimationClip clip, float localTime) {
+        if (IsExportEditor) {
+            if (!_graph.IsValid() || !_controllerPlayable.IsValid())
+                return;
+        }
+
+        if (!_overrideAnimation)
+            RecreateGraph();
+
+        SetAnim(clip);
+        var duration = clip ? clip.length : 0f;
+        var normalized = duration <= 0f ? 0f : Mathf.Clamp01(localTime / duration);
+        ApplyNormalizedTime(normalized);
+    }
+
+    void ApplyNormalizedTime(float normalized) {
         if (IsExportEditor) {
             _controllerPlayable.Play("Clip", 0, normalized);
             _controllerPlayable.SetFloat(AV_CycleOffset, normalized);
@@ -153,7 +184,8 @@ public class CharComponent : MonoBehaviour {
             _anim.SetFloat(AV_CycleOffset, normalized);
             _anim.Update(0f);
         }
-    } 
+    }
+
     void SetAnim(AnimationClip clip) {
         if (clip == Clip)
             return;

@@ -1,8 +1,8 @@
 {
   "name": "com.bz.drills",
   "displayName": "Drills",
-  "description": "Drills for XR Placement",
-  "version": "1.4.0",
+  "description": "Drills for XR Placement. Requires com.tox.unityutils (https://github.com/ToxPlayers/UnityUtils.git) to be added to the consuming project's Packages/manifest.json: Unity cannot resolve git URLs declared in a package's own dependencies block, so it has to be installed alongside this package.",
+  "version": "1.5.0",
   "unity": "2020.3",
   "author": "bz (https://github.com/BeniZan/Drills)",
   "homepage": "https://github.com/BeniZan/Drills",
