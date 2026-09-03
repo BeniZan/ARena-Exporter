@@ -17,8 +17,18 @@ public class ExporterDrillActivator : SingletonBehaviors.SingletonMono<ExporterD
     [SerializeField] List<CharComponent> _placedChars = new List<CharComponent>(); 
     public IReadOnlyList<CharComponent> PlacedChars => _placedChars;
     private void OnEnable() {
-        Activate(CurrentActive);
+        CharAnimationTrigger.GetTriggerName = GetTriggerName;
+        Activate(CurrentActive); 
     }
+
+    string GetTriggerName(int idx) {
+        if (!CurrentActive)
+            return "";
+        if (idx < 0 || idx >= CurrentActive.Triggers.Count)
+            return "";
+        return CurrentActive.Triggers[idx].Name;
+    }
+
     public void Activate(DrillData move) {
         if (CurrentActive)
             Deactivate();
@@ -85,8 +95,12 @@ public class ExporterDrillActivator : SingletonBehaviors.SingletonMono<ExporterD
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(transform.position, Vector3.one * 0.1f);
         GizmosU.GizmosArrow(transform.position, transform.rotation.EulerSeperateY() * Vector3.forward);
-    } 
-     
+    }
+
+    private void OnDisable() {
+        CharAnimationTrigger.GetTriggerName = null;
+    }
+
 
 #if UNITY_EDITOR  
     protected override void OnDestroy() {

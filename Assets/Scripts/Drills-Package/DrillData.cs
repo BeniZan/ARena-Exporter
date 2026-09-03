@@ -4,17 +4,17 @@ using UnityEditor;
 using UnityEngine;
 using System.IO;
 using System;
-using Sirenix.OdinInspector.Editor;
-
 
 #if UNITY_EDITOR
+using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities.Editor;
 #endif
 
 [Serializable]
 public struct DrillTrigger {
     public string Name;
-    public Vector2 FieldStandardPosition;
+    [LabelText("Position", SdfIconType.ArrowsMove)]
+    public Vector2 FieldStandardPositionXZ;
     /// <summary>
     /// When the local player is expected to reach this trigger. Drives the editor
     /// scrubber, and gives the runtime a timeout so a drill cannot stall if the
@@ -22,11 +22,12 @@ public struct DrillTrigger {
     /// </summary>
     [Min(0f)] public float NominalTime;
 
-    public Vector3 LocalPosition => CourtSpace.ToLocal(FieldStandardPosition);
+    public Vector3 LocalPosition => CourtSpace.ToLocal(FieldStandardPositionXZ);
 }
 
 [System.Serializable]
 public class DrillData : ScriptableObject {
+    public static readonly Vector2 FieldStandardSize = new Vector2(28f, 15f);
     public enum Category { 
         PickAndRoll,
         Shooting,
@@ -53,7 +54,7 @@ public class DrillData : ScriptableObject {
 #if UNITY_EDITOR
     public void SetTriggerPosition(int idx, Vector2 fieldStandard) {
         var trigger = _triggers[idx];
-        trigger.FieldStandardPosition = fieldStandard;
+        trigger.FieldStandardPositionXZ = fieldStandard;
         _triggers[idx] = trigger;
     }
 #endif
@@ -73,12 +74,12 @@ public class DrillData : ScriptableObject {
         // pair, so it is .y that flips here and not .x.
         foreach(var c in mirror.CharsData) {
             c.yRotation = -c.yRotation;
-            c.FieldStandardPosition.y = -c.FieldStandardPosition.y;
+            c.FieldStandardPositionXZ.y = -c.FieldStandardPositionXZ.y;
         }
         mirror._localPlayerStartPos.y = -mirror._localPlayerStartPos.y;
         for (int i = 0; i < mirror._triggers.Count; i++) {
             var trigger = mirror._triggers[i];
-            trigger.FieldStandardPosition.y = -trigger.FieldStandardPosition.y;
+            trigger.FieldStandardPositionXZ.y = -trigger.FieldStandardPositionXZ.y;
             mirror._triggers[i] = trigger;
         }
 
@@ -92,7 +93,10 @@ public class DrillData : ScriptableObject {
 
     void OnTriggerBeginGUI(int idx) {
 #if UNITY_EDITOR
+        var color = GUI.color;
+        GUI.color = Color.white;
         SirenixEditorGUI.Title(TriggerLabel(idx), "", TextAlignment.Left, true, true);
+        GUI.color = color;
 #endif
     }
 

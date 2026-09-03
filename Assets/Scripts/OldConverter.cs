@@ -53,7 +53,7 @@ public class OldConverter : MonoBehaviour
 
     CharData Convert(Data oldData) {
         return new CharData() {
-            FieldStandardPosition = oldData.position.XZ(),
+            FieldStandardPositionXZ = oldData.position.XZ(),
             yRotation = oldData.rotation.eulerAngles.y,
             Animation = CharData.GetAnimation(oldData.data.Animation)
         };

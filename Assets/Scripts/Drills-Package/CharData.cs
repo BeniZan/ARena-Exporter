@@ -5,7 +5,8 @@ using System.IO;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Scripting; 
+using UnityEngine.Scripting;
+using UnityEngine.Serialization;
 
 #if UNITY_EDITOR
 [InitializeOnLoad]
@@ -45,7 +46,8 @@ public class CharData {
 #endif
 
 
-    public Vector2 FieldStandardPosition;
+    [FormerlySerializedAs("FieldStandardPosition")]
+    public Vector2 FieldStandardPositionXZ;
     [PropertyRange(0f, 360f)]
     public float yRotation;
     [ValueDropdown(nameof(_animationDropdown), AppendNextDrawer = true)]
@@ -62,6 +64,13 @@ public class CharData {
     public struct CharAnimationTrigger {
 #if DRILL_EXPORT_EDITOR
         static public int MAX_TRIGGER_IDX = 0;
+        static public Func<int, string> GetTriggerName;
+        string GetTriggerIndexLabel() {
+            if (GetTriggerName == null)
+                return "Trigger Index: ";
+            return "Trigger Index: " + GetTriggerName?.Invoke(TriggerIndex) ?? ""; 
+        }
+        [LabelText( "@" + nameof(GetTriggerIndexLabel) + "()")]
         [PropertyRange(0, nameof(MAX_TRIGGER_IDX))]
 #endif
         public int TriggerIndex; 

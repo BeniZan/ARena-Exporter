@@ -41,7 +41,7 @@ public class CharComponent : MonoBehaviour {
             RecreateGraph();
 
         if(data != null) { 
-            var pos = CourtSpace.ToLocal(data.FieldStandardPosition);
+            var pos = CourtSpace.ToLocal(data.FieldStandardPositionXZ);
             var rot = Quaternion.Euler(0, data.yRotation, 0);
             transform.SetLocalPositionAndRotation(pos, rot);
             // While a drill is being scrubbed the animator owns the clip slot, and this
