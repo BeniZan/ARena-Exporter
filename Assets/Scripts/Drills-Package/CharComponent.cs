@@ -42,7 +42,10 @@ public class CharComponent : MonoBehaviour {
 
         if(data != null) { 
             var pos = CourtSpace.ToLocal(data.FieldStandardPositionXZ);
-            var rot = Quaternion.Euler(0, data.yRotation, 0);
+            if(mirror)
+                pos.z = -pos.z;
+            var rot = Quaternion.Euler(0, data.yRotation, 0); 
+
             transform.SetLocalPositionAndRotation(pos, rot);
             // While a drill is being scrubbed the animator owns the clip slot, and this
             // runs every editor frame, so only push the base clip when it actually changes.

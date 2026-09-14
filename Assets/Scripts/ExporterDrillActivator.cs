@@ -48,8 +48,6 @@ public class ExporterDrillActivator : SingletonBehaviors.SingletonMono<ExporterD
         CharAnimationTrigger.MAX_TRIGGER_IDX = Mathf.Max(0, CurrentActive.Triggers.Count - 1);
         var originPos = CurrentActive.OriginPoint;
         var originRot = Quaternion.Euler(0f, CurrentActive.OriginYRotation, 0f);
-        if (CurrentActive.MirrorLeftRight)
-            originRot *= Quaternion.Euler(0f, 180f, 0f);
         _courtTf.SetLocalPositionAndRotation(originPos, originRot);
 
         int i = 0;
