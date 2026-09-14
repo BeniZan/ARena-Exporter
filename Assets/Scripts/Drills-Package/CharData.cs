@@ -30,7 +30,7 @@ public class CharData {
         EditorApplication.projectChanged += LoadAnimations;
     }
     static void LoadAnimations() {
-        var animationFolder = "Assets/Data/Character/Animations";
+        const string animationFolder = "Assets\\Scripts\\Drills-Package\\Character\\Animations";
         var animations = AssetDatabase.FindAssets("t:" + nameof(AnimationClip) 
                                 , new string[] { animationFolder });
         foreach(var guidStr in animations) {
@@ -74,6 +74,7 @@ public class CharData {
         [PropertyRange(0, nameof(MAX_TRIGGER_IDX))]
 #endif
         public int TriggerIndex; 
+        [ValueDropdown("@" + nameof(CharData) + "." + nameof(_animationDropdown), AppendNextDrawer = true)]
         public AnimationClip TriggeredClip;
         /// <summary>Staggers characters that all react to the same trigger.</summary>
         [Min(0f)] public float DelayAfterTrigger;
