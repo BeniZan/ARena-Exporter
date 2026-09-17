@@ -1,5 +1,4 @@
-using Sirenix.OdinInspector;
-using System.Collections.Generic;
+using Sirenix.OdinInspector; 
 using UnityEngine;
 using UnityEngine.Animations;  
 using UnityEngine.Playables;
@@ -28,8 +27,7 @@ public class CharComponent : MonoBehaviour {
 #endif
     [ShowInInspector, SerializeField] CharData _data;
     [SerializeField] CharSkin[] _skins;
-    [SerializeField] Material _hologramMat;
-    Dictionary<SkinnedMeshRenderer, Material> _originalMaterials = new();
+
     Animator _anim => _skins[_usedAnimatorSkinIdx].Animator;
     public CharSkin ActiveSkin => _skins[_usedAnimatorSkinIdx];
 
@@ -89,22 +87,6 @@ public class CharComponent : MonoBehaviour {
             RecreateGraph(); 
         } else {
             Debug.LogError("No animator skins assigned to CharComponent.");
-        }
-    }
-
-    public void SetHologram(bool isHologram) {
-        foreach (var skin in _skins) {
-            var renderer = skin.ShirtRenderer;
-            if (isHologram) {
-                if (!_originalMaterials.ContainsKey(renderer))
-                    _originalMaterials[renderer] = renderer.sharedMaterial;
-                renderer.sharedMaterial = _hologramMat;
-            } else {
-                if (_originalMaterials.TryGetValue(renderer, out var originalMat)) {
-                    renderer.sharedMaterial = originalMat;
-                    _originalMaterials.Remove(renderer);
-                }
-            }
         }
     }
 
