@@ -48,11 +48,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharComponent
   _data:
-    FieldStandardPosition: {x: 0, y: 0}
+    FieldStandardPositionXZ: {x: 0, y: 0}
     yRotation: 0
     Animation: {fileID: 0}
     AnimationTimeOffset: 0
     IsFriendly: 0
+    AnimationTriggers: []
   _skins:
   - Animator: {fileID: 4819892590403858671}
     ShirtRenderer: {fileID: 3230011934323294406}
@@ -66,6 +67,7 @@ MonoBehaviour:
     ShirtRenderer: {fileID: 8482136905480039233}
     HeadTf: {fileID: 8998524557236003908}
     Weight: 30
+  _hologramMat: {fileID: 2100000, guid: c511cde2091a2284bb85f6a7dc69bc03, type: 2}
 --- !u!1001 &1407699719736495486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -349,7 +351,7 @@ PrefabInstance:
     - target: {fileID: -4658294511803085384, guid: d74f8404c090903428b53ba09e1b4aa8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4b8941a2f41388a43b320059c2dcea33, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: -4636117007756620645, guid: d74f8404c090903428b53ba09e1b4aa8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.003470114
@@ -1180,7 +1182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4975402464950334519, guid: d74f8404c090903428b53ba09e1b4aa8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.036939196
+      value: 0.0369392
       objectReference: {fileID: 0}
     - target: {fileID: 4975402464950334519, guid: d74f8404c090903428b53ba09e1b4aa8, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1188,7 +1190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4975402464950334519, guid: d74f8404c090903428b53ba09e1b4aa8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.04771338
+      value: 0.047713384
       objectReference: {fileID: 0}
     - target: {fileID: 5320794973693787172, guid: d74f8404c090903428b53ba09e1b4aa8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1250,10 +1252,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: d74f8404c090903428b53ba09e1b4aa8, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: d1370326e19331b4ea86a6e95f268b27, type: 2}
     - target: {fileID: 5866666021909216657, guid: d74f8404c090903428b53ba09e1b4aa8, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1
@@ -1757,7 +1755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 27736e7b7af083a4986367ca7c9c3782, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3060967477237235896, guid: 27736e7b7af083a4986367ca7c9c3782, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1770,7 +1768,7 @@ PrefabInstance:
     - target: {fileID: 5433269313094510252, guid: 27736e7b7af083a4986367ca7c9c3782, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4b8941a2f41388a43b320059c2dcea33, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 27736e7b7af083a4986367ca7c9c3782, type: 3}
       propertyPath: m_Controller
       value: 
@@ -1858,12 +1856,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5ad9125aee2d8324881fc067a53d5999, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5433269313094510252, guid: 5ad9125aee2d8324881fc067a53d5999, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 4b8941a2f41388a43b320059c2dcea33, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 5ad9125aee2d8324881fc067a53d5999, type: 3}
       propertyPath: m_Controller
       value: 
